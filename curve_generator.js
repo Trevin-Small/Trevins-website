@@ -9,6 +9,7 @@ var Curves = (function newCurves() {
     var MAX_MOUSE_MOTION = 100;
     var HEADER_HEIGHT = 90;
 
+    var handled = false;
     var colorScheme = Math.floor(Math.random() * 10) + 1;
     var mouseX = 0; 
     var mouseY = 0;
@@ -144,8 +145,11 @@ var Curves = (function newCurves() {
         });
 
         canvas.addEventListener('touchstart', function(evt) {
-            if (evt.type != "touchend"){
+            if (evt.type != "touchend" && !handled){
                 newWaves();
+                handled = true;
+            } else {
+                handled = false;
             }
         });
 
