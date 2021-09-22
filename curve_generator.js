@@ -138,10 +138,22 @@ var Curves = (function newCurves() {
         }; 
 
         document.addEventListener('keyup', event => {
-            console.log("Key pressed");
             if (event.code === 'Space') {
             newWaves();
             }
+        });
+
+        document.addEventListener('click', event => {
+            newWaves();
+        });
+
+        canvas.addEventListener('touchstart', function(evt) {
+            newWaves();
+        });
+
+        canvas.addEventListener('touchmove', function(evt) {
+            mouseX = evt.touches[0].pageX;
+            mouseY = evt.touches[0].pageY;
         });
 
         canvas.addEventListener('mousemove', function(evt) {

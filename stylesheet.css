@@ -68,7 +68,7 @@
     text-align: center;
     overflow: hidden;
     left: 50%;
-    top: 35%;
+    top: 30%;
     margin: 0px 0px 0px -180px;
     position: absolute;
     overflow: hidden;
@@ -95,9 +95,9 @@
     background: darkslategray;
 }
 .no-margins {
-    margin: 0px;
+    margin: -2px;
     left: 0px;
-    bottom: 0px;
+    bottom: -2px;
     overflow: hidden;
     position: fixed;
     background-color: rgb(60, 88, 88);
