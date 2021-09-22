@@ -149,8 +149,8 @@ var Curves = (function newCurves() {
             mouseY = evt.touches[0].pageY;
         }, false);
 
-        canvas.addEventListener('mousemove', function() { 
-        getMousePos(evt)
+        canvas.addEventListener('mousemove', function(evt) { 
+            getMousePos(evt)
         }, false);
 
         canvas.addEventListener('click', function() {
