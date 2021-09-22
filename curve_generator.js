@@ -125,6 +125,11 @@ var Curves = (function newCurves() {
         return shapes;
     }
     
+    function handleMobileClick(){
+        newWaves();
+        canvas.removeEventListener('touchend', handleMobileClick(), false);
+    }
+
     function init(parent) {
         canvas.width = width;
         canvas.height = height;
@@ -140,31 +145,20 @@ var Curves = (function newCurves() {
 
         document.addEventListener('keyup', event => {
             if (event.code === 'Space') {
-            newWaves();
+                newWaves();
             }
         });
-
-        canvas.addEventListener('touchstart', function(evt) {
-            if (evt.type != "click" && !handled){
-                newWaves();
-                handled = true;
-            } else {
-                handled = false;
-            }
-        }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
             mouseX = evt.touches[0].pageX;
             mouseY = evt.touches[0].pageY;
         }, false);
 
-        canvas.addEventListener('mousemove', function(evt) {
-            getMousePos(evt);
+        canvas.addEventListener('touchstart', function() {
+            canvas.addEventListener('touchend', handleMobileClick(), false);
         }, false);
-
-        canvas.addEventListener('click', function(evt) {
-            newWaves();
-        }, false);
+        canvas.addEventListener('mousemove', getMousePos(), false);
+        canvas.addEventListener('click', newWaves(), false);
 
         startRender();
     }
