@@ -9,7 +9,7 @@ var Curves = (function newCurves() {
     var MAX_MOUSE_MOTION = 100;
     var HEADER_HEIGHT = 90;
 
-    var colorScheme = 7;
+    var colorScheme = Math.floor(Math.random() * 10) + 1;
     var mouseX = 0; 
     var mouseY = 0;
 
