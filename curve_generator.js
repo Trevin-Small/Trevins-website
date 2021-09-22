@@ -153,10 +153,10 @@ var Curves = (function newCurves() {
             mouseX = evt.touches[0].pageX;
             mouseY = evt.touches[0].pageY;
         }, false);
-
+        /*
         canvas.addEventListener('touchstart', function() {
             canvas.addEventListener('touchend', handleMobileClick(), false);
-        }, false);
+        }, false);*/
         canvas.addEventListener('mousemove', getMousePos(), false);
         canvas.addEventListener('click', newWaves(), false);
 
