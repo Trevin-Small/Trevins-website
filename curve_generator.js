@@ -145,7 +145,7 @@ var Curves = (function newCurves() {
         });
 
         canvas.addEventListener('touchstart', function(evt) {
-            if (evt.type != "touchend" && !handled){
+            if (evt.type != "click" && !handled){
                 newWaves();
                 handled = true;
             } else {
