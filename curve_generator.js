@@ -124,11 +124,6 @@ var Curves = (function newCurves() {
         }
         return shapes;
     }
-    
-    function handleMobileClick(){
-        newWaves();
-        canvas.removeEventListener('touchend', handleMobileClick(), false);
-    }
 
     function init(parent) {
         canvas.width = width;
@@ -153,23 +148,24 @@ var Curves = (function newCurves() {
             mouseX = evt.touches[0].pageX;
             mouseY = evt.touches[0].pageY;
         }, false);
-        /*
-        canvas.addEventListener('touchstart', function() {
-            canvas.addEventListener('touchend', handleMobileClick(), false);
-        }, false);*/
-        canvas.addEventListener('mousemove', getMousePos(), false);
-        canvas.addEventListener('click', newWaves(), false);
+
+        canvas.addEventListener('mousemove', function() { 
+        getMousePos(evt)
+        }, false);
+
+        canvas.addEventListener('click', function() {
+            newWaves();
+        }, false);
 
         startRender();
     }
-    var checkedLastIteration = false;
+
     function render() { // Recrusive Animation loop 
         raf_ID = window.requestAnimationFrame(render);
         ctx.clearRect(0, 0, width, height);
         shapes.slice().reverse().forEach(function(shape) {
             shape.render(ctx, width, height);
         });
-        checkedLastIteration = !checkedLastIteration;
     }
     function startRender() {
         render();
@@ -193,14 +189,13 @@ var Curves = (function newCurves() {
 })();
 
 window.onload = function() {
-Curves.init(document.body);
+    Curves.init(document.body);
+
 }
 
 function copyEmail() {  
     navigator.clipboard.writeText("trevincub03@gmail.com");
-  
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
+    alert("Copied the text: trevincub03@gmail.com");
 }
 
 function hideElement(id){
