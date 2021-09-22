@@ -151,20 +151,20 @@ var Curves = (function newCurves() {
             } else {
                 handled = false;
             }
-        });
+        }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
             mouseX = evt.touches[0].pageX;
             mouseY = evt.touches[0].pageY;
-        });
+        }, false);
 
         canvas.addEventListener('mousemove', function(evt) {
             getMousePos(evt);
         }, false);
 
-        canvas.addEventListener('click', event => {
+        canvas.addEventListener('click', function(evt) {
             newWaves();
-        });
+        }, false);
 
         startRender();
     }
