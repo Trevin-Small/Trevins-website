@@ -21,7 +21,6 @@ var Curves = (function newCurves() {
         if (colorScheme > 10){
             colorScheme = 1;
         }
-        console.log("Color Scheme: " + colorScheme);
         shapes = generateShapes();
     }
 
