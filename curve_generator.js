@@ -143,12 +143,10 @@ var Curves = (function newCurves() {
             }
         });
 
-        document.addEventListener('click', event => {
-            newWaves();
-        });
-
         canvas.addEventListener('touchstart', function(evt) {
-            newWaves();
+            if (evt.type != "touchend"){
+                newWaves();
+            }
         });
 
         canvas.addEventListener('touchmove', function(evt) {
@@ -159,6 +157,10 @@ var Curves = (function newCurves() {
         canvas.addEventListener('mousemove', function(evt) {
             getMousePos(evt);
         }, false);
+
+        canvas.addEventListener('click', event => {
+            newWaves();
+        });
 
         startRender();
     }
