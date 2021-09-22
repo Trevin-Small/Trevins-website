@@ -138,8 +138,8 @@ var Curves = (function newCurves() {
             startRender();
         }; 
 
-        document.addEventListener('keyup', event => {
-            if (event.code === 'Space') {
+        document.addEventListener('keyup', function(evt) {
+            if (evt.code === 'Space') {
                 newWaves();
             }
         });
@@ -153,7 +153,7 @@ var Curves = (function newCurves() {
             getMousePos(evt)
         }, false);
 
-        canvas.addEventListener('click', function() {
+        canvas.addEventListener('click', function(evt) {
             newWaves();
         }, false);
 
