@@ -218,9 +218,6 @@ var Curves = (function newCurves() {
 
         canvas.addEventListener('mousemove', function(evt) { 
             if (mouseMoveActive){
-                if (!arrowsHasShown) {
-                    showElement('move-mouse-message', 'flex');
-                }
                 getMousePos(evt);
                 setTimeout(() => {delayed = true}, 2000);
                 if (delayed && !arrowsHasShown){
@@ -236,6 +233,7 @@ var Curves = (function newCurves() {
                 invertLogo();
                 if (clickMessageShowing){
                     hideElement('click-message');
+                    showElement('move-mouse-message', 'flex');
                     clickMessageShowing = false;
                 } else {
                     mouseMoveActive = true;
