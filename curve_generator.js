@@ -170,6 +170,7 @@ var Curves = (function newCurves() {
         var arrowsMessageShowing = false;
         var delayed = false;
         var arrowsHasShown = false;
+        var hasShownClickMessage = false;
 
         window.onresize = function() {
             stopRender();
@@ -184,9 +185,10 @@ var Curves = (function newCurves() {
                 if (spaceMessageShowing){
                     hideElement('spacebar-message');
                     spaceMessageShowing = false;
-                } else if (!clickMessageShowing) {
+                } else if (!clickMessageShowing && !hasShownClickMessage) {
                     showElement('click-message', 'flex');
                     clickMessageShowing = true;
+                    hasShownClickMessage = true;
                 }
             } else if (delayed) {
                 switch (evt.code) {
@@ -233,10 +235,12 @@ var Curves = (function newCurves() {
                 invertLogo();
                 if (clickMessageShowing){
                     hideElement('click-message');
-                    showElement('move-mouse-message', 'flex');
                     clickMessageShowing = false;
                 } else {
                     mouseMoveActive = true;
+                }
+                if (!arrowsHasShown && mouseMoveActive){
+                    showElement('move-mouse-message', 'flex');
                 }
             }
         }, false);
