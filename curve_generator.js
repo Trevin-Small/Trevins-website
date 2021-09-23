@@ -26,9 +26,7 @@ var Curves = (function newCurves() {
         document.getElementById('header').style.backgroundColor = siteColorThemes[siteTheme][0];
         document.getElementById('header-divider').style.backgroundColor = siteColorThemes[siteTheme][1];
         document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2]; 
-        var titleText = document.getElementById('title-text');
-        titleText.style.fill = siteColorThemes[siteTheme][3]; 
-        titleText.style.stroke = siteColorThemes[siteTheme][3]; 
+        document.getElementById('title-text').src = (siteTheme == 1) ? 'header-text-white.svg' : 'header-text-black.svg';
         var logo = document.getElementById('logo'); 
         logo.style.fill = siteColorThemes[siteTheme][3];
         logo.style.stroke = siteColorThemes[siteTheme][3];

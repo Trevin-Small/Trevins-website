@@ -41,15 +41,15 @@
 }
 .title-text {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     overflow: hidden;
     color: white;
     width: 400px;
+    height: 90%;
     text-align: center;
-    padding: 12px 0px 0px 20px;
     opacity: 0.8;
 }
 .divider {
