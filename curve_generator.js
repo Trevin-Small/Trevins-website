@@ -171,6 +171,7 @@ var Curves = (function newCurves() {
         var delayed = false;
         var arrowsHasShown = false;
         var hasShownClickMessage = false;
+        var spacedTwice = false;
 
         window.onresize = function() {
             stopRender();
@@ -189,6 +190,7 @@ var Curves = (function newCurves() {
                     showElement('click-message', 'flex');
                     clickMessageShowing = true;
                     hasShownClickMessage = true;
+                    spacedTwice = true;
                 }
             } else if (delayed) {
                 switch (evt.code) {
@@ -231,7 +233,7 @@ var Curves = (function newCurves() {
         }, false);
 
         canvas.addEventListener('click', function(evt) {
-            if (!spaceMessageShowing){
+            if (!spaceMessageShowing && spacedTwice){
                 invertLogo();
                 if (clickMessageShowing){
                     hideElement('click-message');
@@ -288,6 +290,7 @@ window.onload = function() {
 function copyEmail() {  
     showElement('email-alert-box', "block");
     navigator.clipboard.writeText("trevincub03@gmail.com");
+    setTimeout(() => {hideElement('email-alert-box')}, 1000);
 }
 
 function hideElement(id){
