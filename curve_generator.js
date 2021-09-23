@@ -1,18 +1,52 @@
 var Curves = (function newCurves() {
     'use strict';
     var raf_ID = 0;
-    var CURVE_INTENSITY = 35;
+    var CURVE_INTENSITY = 45;
     var SPEED_FACTOR = 0.02;
     var NUM_OF_CURVES = Math.round(Math.random() * 1 + 5);
     var NUM_MIN_MAX = Math.random() * 15 + 15;
     var DISTANCE_EXPONENT = 1.25;
     var MAX_MOUSE_MOTION = 100;
-    var HEADER_HEIGHT = 90;
 
-    var handled = false;
+    var isDisplayed = false;
     var colorScheme = Math.floor(Math.random() * 10) + 1;
     var mouseX = 0; 
     var mouseY = 0;
+    var siteTheme = 1;
+    var siteColorThemes = {
+        1: ["#4f0147", "#290025", "#11001c", "#ffffff"],
+        2: ["#ece071", "000000", "#dbdbdb", "#000000"]
+    };
+
+    function nextColorTheme(){
+        siteTheme += 1;
+        if (siteTheme > 2){
+            siteTheme = 1;
+        }
+        document.getElementById('header').style.backgroundColor = siteColorThemes[siteTheme][0];
+        document.getElementById('header-divider').style.backgroundColor = siteColorThemes[siteTheme][1];
+        document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2]; 
+        var titleText = document.getElementById('title-text');
+        titleText.style.fill = siteColorThemes[siteTheme][3]; 
+        titleText.style.stroke = siteColorThemes[siteTheme][3]; 
+        var logo = document.getElementById('logo'); 
+        logo.style.fill = siteColorThemes[siteTheme][3];
+        logo.style.stroke = siteColorThemes[siteTheme][3];
+
+        var iconBoxes = document.getElementsByClassName('icon-box');
+        for (var i = 0; i < iconBoxes.length; i++) {
+            iconBoxes[i].style.color = siteColorThemes[siteTheme][3];
+        };
+    }
+
+    function invertLogo() {
+        if (isDisplayed) {
+            hideElement('title-t')
+        } else {
+            showElement('title-t', 'flex');
+        }
+        isDisplayed = !isDisplayed;
+    }
 
     function newWaves(){
         NUM_OF_CURVES = Math.round(Math.random() * 1 + 5);
@@ -42,6 +76,7 @@ var Curves = (function newCurves() {
         ctx.strokeStyle = '#fff';
         ctx.fillStyle = 'rgba(255, 255, 255, 0.16)';
         ctx.fillStyle = this.color;
+        ctx.globalAlpha = 0.60;
         ctx.beginPath();
         ctx.moveTo(this.points[0].x, this.points[0].y);
         this.points.forEach(function(point, i) {
@@ -89,7 +124,7 @@ var Curves = (function newCurves() {
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
     var width = window.innerWidth;
-    var height = window.innerHeight - HEADER_HEIGHT;
+    var height = window.innerHeight;
     var shapes = generateShapes();
 
     function generateShapes(num, spacing) {
@@ -111,7 +146,7 @@ var Curves = (function newCurves() {
                 offset -= x / 20;
                 var point = { 
                     x: x, 
-                    y: yCenter + offset + 10 + Math.random() * 20,
+                    y: yCenter + offset,
                     oldY: yCenter + offset,
                     angle: angle,
                     speed: SPEED_FACTOR
@@ -129,6 +164,12 @@ var Curves = (function newCurves() {
         canvas.height = height;
         parent.appendChild(canvas);
         ctx.fillStyle = '#111';
+        var spaceMessageShowing = true;
+        var clickMessageShowing = false;
+        var mouseMoveActive = false;
+        var arrowsMessageShowing = false;
+        var delayed = false;
+        var arrowsHasShown = false;
 
         window.onresize = function() {
             stopRender();
@@ -138,23 +179,74 @@ var Curves = (function newCurves() {
         }; 
 
         document.addEventListener('keyup', function(evt) {
-            if (evt.code === 'Space') {
+            if (evt.code === 'Space'){
                 newWaves();
+                if (spaceMessageShowing){
+                    hideElement('spacebar-message');
+                    spaceMessageShowing = false;
+                } else if (!clickMessageShowing) {
+                    showElement('click-message', 'flex');
+                    clickMessageShowing = true;
+                }
+            } else if (delayed) {
+                switch (evt.code) {
+                    case 'ArrowLeft':
+                    case 'ArrowRight':
+                    case 'ArrowDown':
+                    case 'ArrowUp':
+                    case 'KeyW':
+                    case 'KeyA':
+                    case 'KeyS':
+                    case 'KeyD':
+                        if (arrowsMessageShowing) {
+                            hideElement('arrows-message');
+                        }
+                        nextColorTheme();
+                        break;
+                    default:
+                        break;
+                }
             }
         });
 
         canvas.addEventListener('touchmove', function(evt) {
-            mouseX = evt.touches[0].pageX;
-            mouseY = evt.touches[0].pageY;
+            if (!spaceMessageShowing){
+                mouseX = evt.touches[0].pageX;
+                mouseY = evt.touches[0].pageY;
+            }
         }, false);
 
         canvas.addEventListener('mousemove', function(evt) { 
-            getMousePos(evt)
+            if (mouseMoveActive){
+                if (!arrowsHasShown) {
+                    showElement('move-mouse-message', 'flex');
+                }
+                getMousePos(evt);
+                setTimeout(() => {delayed = true}, 2000);
+                if (delayed && !arrowsHasShown){
+                    hideElement('move-mouse-message');
+                    setTimeout(() => {showElement('arrows-message', 'flex'); arrowsMessageShowing = true}, 1000); 
+                    arrowsHasShown = true;
+                }
+            }
         }, false);
 
         canvas.addEventListener('click', function(evt) {
-            newWaves();
+            if (!spaceMessageShowing){
+                invertLogo();
+                if (clickMessageShowing){
+                    hideElement('click-message');
+                    clickMessageShowing = false;
+                } else {
+                    mouseMoveActive = true;
+                }
+            }
         }, false);
+
+        var canvasImage = document.getElementsByClassName('canvas-image');
+        canvasImage[0].addEventListener('click', function(evt) {
+            invertLogo();
+        });
 
         startRender();
     }
@@ -176,7 +268,7 @@ var Curves = (function newCurves() {
     
     function resize() {
         width = canvas.width = window.innerWidth;
-        height = canvas.height = window.innerHeight - HEADER_HEIGHT;
+        height = canvas.height = window.innerHeight;
     }
 
     return {
@@ -189,12 +281,11 @@ var Curves = (function newCurves() {
 
 window.onload = function() {
     Curves.init(document.body);
-
 }
 
 function copyEmail() {  
+    showElement('email-alert-box', "block");
     navigator.clipboard.writeText("trevincub03@gmail.com");
-    alert("Copied the text: trevincub03@gmail.com");
 }
 
 function hideElement(id){
@@ -202,8 +293,7 @@ function hideElement(id){
     element.style.display = "none";
 }
 
-document.body.onkeyup = function(e){
-    if(e.keyCode == 32){
-        hideElement('spacebar-message');
-    }
+function showElement(id, displayType){
+    var element = document.getElementById(id);
+    element.style.display = displayType;
 }
