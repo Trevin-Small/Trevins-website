@@ -13,15 +13,12 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    text-align: center;
     overflow: hidden;
-    position: fixed;
     height: inherit;
-    width: 35%;
+    width: 50%;
     top: 0px;
     left: 0px;
-    padding-left: 20px;
-    color: white;
+    position: fixed;
 }
 .title-right {
     display: flex;
@@ -41,14 +38,14 @@
 }
 .title-text {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    text-align: center;
     overflow: hidden;
     color: white;
-    width: 400px;
+    width: auto;
     height: 90%;
+    padding-left: 5px;
     text-align: center;
     opacity: 0.8;
 }

@@ -1,12 +1,13 @@
 var Curves = (function newCurves() {
     'use strict';
     var raf_ID = 0;
-    var CURVE_INTENSITY = 45;
-    var SPEED_FACTOR = 0.02;
-    var NUM_OF_CURVES = Math.round(Math.random() * 1 + 5);
-    var NUM_MIN_MAX = Math.random() * 15 + 15;
-    var DISTANCE_EXPONENT = 1.25;
+    var CURVE_INTENSITY = 40;
+    var SPEED_FACTOR = Math.random() * 0.015 + 0.01;
+    var NUM_OF_CURVES = Math.round(Math.random() * 2 + 4);
+    var NUM_MIN_MAX = Math.random() * 10 + 15;
+    var DISTANCE_EXPONENT = 1.3;
     var MAX_MOUSE_MOTION = 100;
+    var MOUSE_COEFFICIENT = 0.8;
 
     var isDisplayed = false;
     var colorScheme = Math.floor(Math.random() * 10) + 1;
@@ -85,7 +86,7 @@ var Curves = (function newCurves() {
                 var distanceY =Math.floor(Math.abs(point.y - mouseY));
                 var distanceX = Math.floor(Math.abs(point.x - mouseX));
                 distanceToMouse = Math.pow(Math.pow(distanceX, 2) + Math.pow(distanceY, 2), 0.5);
-                changeY = distanceY * (MAX_MOUSE_MOTION / Math.pow(distanceToMouse, DISTANCE_EXPONENT));
+                changeY = distanceY * (MAX_MOUSE_MOTION / Math.pow(distanceToMouse, DISTANCE_EXPONENT)) * MOUSE_COEFFICIENT;
                 point.y -= changeY;
             }
 
@@ -170,10 +171,13 @@ var Curves = (function newCurves() {
         var arrowsHasShown = false;
         var hasShownClickMessage = false;
         var spacedTwice = false;
+        resize();
+        rescaleIcons(height);
 
         window.onresize = function() {
             stopRender();
             resize();
+            rescaleIcons(height);
             shapes = generateShapes();
             startRender();
         }; 
@@ -299,4 +303,12 @@ function hideElement(id){
 function showElement(id, displayType){
     var element = document.getElementById(id);
     element.style.display = displayType;
+}
+
+function rescaleIcons(_height){
+    var icons = document.getElementsByName('icon-svg');
+    for (var i = 0; i < icons.length; i++){
+        var newSize = Math.floor(_height * 0.09).toString().concat('px');
+        icons[i].style.fontSize = newSize;
+    }
 }
