@@ -292,7 +292,7 @@ window.onload = function() {
 function copyEmail() {  
     showElement('email-alert-box', "block");
     navigator.clipboard.writeText("trevincub03@gmail.com");
-    setTimeout(() => {hideElement('email-alert-box')}, 1000);
+    setTimeout(() => {hideElement('email-alert-box')}, 1500);
 }
 
 function hideElement(id){
@@ -308,7 +308,7 @@ function showElement(id, displayType){
 function rescaleIcons(_height){
     var icons = document.getElementsByName('icon-svg');
     for (var i = 0; i < icons.length; i++){
-        var newSize = Math.floor(_height * 0.09).toString().concat('px');
+        var newSize = Math.floor(_height * 0.08).toString().concat('px');
         icons[i].style.fontSize = newSize;
     }
 }
