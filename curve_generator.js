@@ -316,9 +316,11 @@ function showElement(id, displayType){
 
 function rescaleIcons(_height){
     var icons = document.getElementsByName('icon-svg');
+    var icon_boxes = document.getElementsByClassName("icon-box");
     for (var i = 0; i < icons.length; i++){
         var newSize = Math.floor(_height * 0.0775).toString().concat('px');
         icons[i].style.fontSize = newSize;
+        icon_boxes[i].style.padding = "0px 8px 0px 8px";
     }
 }
 

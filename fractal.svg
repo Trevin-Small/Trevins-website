@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <circle style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-width: 7px;" cx="251" cy="251.319" r="78.556"/>
+  <g transform="matrix(1, 0, 0, 1, 0, 1.319)">
+    <g>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="250" cy="164.2" r="44.151"/>
+      <circle style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-width: 5px;" cx="250" cy="120.3" r="18.321"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="205.35" cy="164" r="18.618"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="250" cy="-333.151" r="44.151" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="294.65" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+      <circle style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-width: 5px;" cx="250" cy="-377.062" r="18.321" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="205.35" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+    </g>
+    <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="294.65" cy="163" r="18.618"/>
+  </g>
+  <g transform="matrix(0, 1, -1, 0, 498.681, 4.283171)">
+    <g>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="250" cy="164.2" r="44.151"/>
+      <circle style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-width: 5px;" cx="250" cy="120.3" r="18.321"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="205.35" cy="164" r="18.618"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="250" cy="-333.151" r="44.151" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="294.65" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+      <circle style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-width: 5px;" cx="250" cy="-377.062" r="18.321" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+      <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="205.35" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+    </g>
+    <circle style="stroke: rgb(0, 0, 0); fill: rgb(255, 255, 255); stroke-width: 5px;" cx="294.65" cy="163" r="18.618"/>
+  </g>
+</svg>
