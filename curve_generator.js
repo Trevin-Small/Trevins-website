@@ -294,11 +294,12 @@ window.onresize = function() {
     rescaleIcons();
 }
 
+/*
 function copyEmail() {  
     showElement('email-alert-box', "block");
     navigator.clipboard.writeText("someone@gmail.com");
     setTimeout(() => {hideElement('email-alert-box')}, 1500);
-}
+}*/
 
 function hideElement(id){
     var element = document.getElementById(id);
