@@ -264,6 +264,7 @@ var Curves = (function newCurves() {
             shape.render(ctx, width, height);
         });
     }
+    
     function startRender() {
         render();
     }
