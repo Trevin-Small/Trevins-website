@@ -171,6 +171,7 @@ var Curves = (function newCurves() {
         var arrowsHasShown = false;
         var hasShownClickMessage = false;
         var spacedTwice = false;
+        var count = 0;
         resize();
         rescaleIcons(height);
 
@@ -185,10 +186,10 @@ var Curves = (function newCurves() {
         document.addEventListener('keyup', function(evt) {
             if (evt.code === 'Space'){
                 newWaves();
-                if (spaceMessageShowing){
+                count++;
+                if (spaceMessageShowing && count == 2){
+                    count = 0;
                     hideElement('spacebar-message');
-                    spaceMessageShowing = false;
-                } else if (!clickMessageShowing && !hasShownClickMessage) {
                     showElement('click-message', 'flex');
                     clickMessageShowing = true;
                     hasShownClickMessage = true;
@@ -215,6 +216,22 @@ var Curves = (function newCurves() {
             }
         });
 
+        canvas.addEventListener('click', function(evt) {
+            if (!spaceMessageShowing && spacedTwice){
+                invertLogo();
+                count++;
+                if (clickMessageShowing && count == 2){
+                    hideElement('click-message');
+                    clickMessageShowing = false;
+                } else {
+                    mouseMoveActive = true;
+                }
+                if (!arrowsHasShown && mouseMoveActive){
+                    showElement('move-mouse-message', 'flex');
+                }
+            }
+        }, false);
+
         canvas.addEventListener('touchmove', function(evt) {
             if (!spaceMessageShowing){
                 mouseX = evt.touches[0].pageX;
@@ -230,21 +247,6 @@ var Curves = (function newCurves() {
                     hideElement('move-mouse-message');
                     setTimeout(() => {showElement('arrows-message', 'flex'); arrowsMessageShowing = true}, 1000); 
                     arrowsHasShown = true;
-                }
-            }
-        }, false);
-
-        canvas.addEventListener('click', function(evt) {
-            if (!spaceMessageShowing && spacedTwice){
-                invertLogo();
-                if (clickMessageShowing){
-                    hideElement('click-message');
-                    clickMessageShowing = false;
-                } else {
-                    mouseMoveActive = true;
-                }
-                if (!arrowsHasShown && mouseMoveActive){
-                    showElement('move-mouse-message', 'flex');
                 }
             }
         }, false);
@@ -292,7 +294,7 @@ window.onload = function() {
 
 function copyEmail() {  
     showElement('email-alert-box', "block");
-    navigator.clipboard.writeText("trevincub03@gmail.com");
+    navigator.clipboard.writeText("someone@gmail.com");
     setTimeout(() => {hideElement('email-alert-box')}, 1500);
 }
 

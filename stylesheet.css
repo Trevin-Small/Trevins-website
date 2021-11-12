@@ -15,7 +15,7 @@
     align-items: center;
     overflow: hidden;
     height: inherit;
-    width: 50%;
+    width: 30%;
     top: 0px;
     left: 0px;
     position: fixed;
@@ -74,8 +74,8 @@
     pointer-events: none;
 }
 .logo {
-    width: 20vw;
-    height: 30vw;
+    width: 19vw;
+    height: 28vw;
     display: block;
     margin: auto;
 }
@@ -84,7 +84,7 @@
     justify-content: center;
     align-items: center;
     height: 85%;
-    padding: 0px 8px 0px 8px;
+    padding: 0px 10px 0px 10px;
     margin-right: 5px;
     border-radius: 6px;
     font-size: 20px;
