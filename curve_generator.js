@@ -172,12 +172,12 @@ var Curves = (function newCurves() {
         var spacedTwice = false;
         var count = 0;
         resize();
-        rescaleIcons(height);
 
         window.onresize = function() {
             stopRender();
             resize();
             rescaleIcons(height);
+            rescaleFont();
             shapes = generateShapes();
             startRender();
         }; 
@@ -288,12 +288,7 @@ var Curves = (function newCurves() {
 
 window.onload = function() {
     Curves.init(document.body);
-    rescaleIcons();
-    rescaleFont();
-}
-
-window.onresize = function() {
-    rescaleIcons();
+    rescaleIcons(window.innerHeight);
     rescaleFont();
 }
 
@@ -322,6 +317,9 @@ function rescaleIcons(_height){
         icons[i].style.fontSize = newSize;
         icon_boxes[i].style.padding = "0px 8px 0px 8px";
     }
+    var icons = document.getElementsByName('fractal-svg');
+    icons[0].style.height = Math.floor(_height * 0.065).toString().concat('px');
+    icons[0].style.padding = "0px";
 }
 
 function rescaleFont() {
