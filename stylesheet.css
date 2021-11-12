@@ -30,7 +30,7 @@
     text-align: center;
     position: fixed;
     height: inherit;
-    width: 50%;
+    width: 60%;
     top: 0px;
     right: 0px;
     opacity: 0.8;
@@ -84,8 +84,8 @@
     justify-content: center;
     align-items: center;
     height: 85%;
-    padding: 0px 10px 0px 10px;
-    margin-right: 5px;
+    padding: 0px 8px 0px 8px;
+    margin-right: 6px;
     border-radius: 6px;
     font-size: 20px;
     fill: gray;
@@ -153,5 +153,5 @@
     border: 5px solid black;
     color: white;
     font-family:'Courier New', Courier, monospace;
-    font-size: 13px;
+    font-size: 16px;
 }
