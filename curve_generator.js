@@ -169,7 +169,6 @@ var Curves = (function newCurves() {
         var arrowsMessageShowing = false;
         var delayed = false;
         var arrowsHasShown = false;
-        var hasShownClickMessage = false;
         var spacedTwice = false;
         var count = 0;
         resize();
@@ -188,11 +187,11 @@ var Curves = (function newCurves() {
                 newWaves();
                 count++;
                 if (spaceMessageShowing && count == 2){
-                    count = 0;
                     hideElement('spacebar-message');
                     showElement('click-message', 'flex');
+                    count = 0;
+                    spaceMessageShowing = false;
                     clickMessageShowing = true;
-                    hasShownClickMessage = true;
                     spacedTwice = true;
                 }
             } else if (delayed) {
@@ -219,8 +218,7 @@ var Curves = (function newCurves() {
         canvas.addEventListener('click', function(evt) {
             if (!spaceMessageShowing && spacedTwice){
                 invertLogo();
-                count++;
-                if (clickMessageShowing && count == 2){
+                if (clickMessageShowing){
                     hideElement('click-message');
                     clickMessageShowing = false;
                 } else {
@@ -290,6 +288,10 @@ var Curves = (function newCurves() {
 
 window.onload = function() {
     Curves.init(document.body);
+}
+
+window.onresize = function() {
+    rescaleIcons();
 }
 
 function copyEmail() {  
