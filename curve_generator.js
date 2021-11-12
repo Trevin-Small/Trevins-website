@@ -288,6 +288,8 @@ var Curves = (function newCurves() {
 
 window.onload = function() {
     Curves.init(document.body);
+    rescaleIcons();
+    rescaleFont();
 }
 
 window.onresize = function() {
