@@ -292,6 +292,7 @@ window.onload = function() {
 
 window.onresize = function() {
     rescaleIcons();
+    rescaleFont();
 }
 
 /*
@@ -314,7 +315,19 @@ function showElement(id, displayType){
 function rescaleIcons(_height){
     var icons = document.getElementsByName('icon-svg');
     for (var i = 0; i < icons.length; i++){
-        var newSize = Math.floor(_height * 0.08).toString().concat('px');
+        var newSize = Math.floor(_height * 0.0775).toString().concat('px');
         icons[i].style.fontSize = newSize;
+    }
+}
+
+function rescaleFont() {
+    var messageBoxes = document.getElementsByClassName("message-box");
+    for (var i = 0; i < messageBoxes.length; i++) {
+        var smallerDimension = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+        if (smallerDimension < 1100) {
+            messageBoxes[i].style.fontSize = smallerDimension * 0.035;
+        } else {
+            messageBoxes[i].style.fontSize = smallerDimension * 0.0275;
+        }
     }
 }

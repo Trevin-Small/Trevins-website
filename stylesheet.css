@@ -15,7 +15,7 @@
     align-items: center;
     overflow: hidden;
     height: inherit;
-    width: 40%;
+    width: 60%;
     top: 0px;
     left: 0px;
     position: fixed;
@@ -30,7 +30,7 @@
     text-align: center;
     position: fixed;
     height: inherit;
-    width: 60%;
+    width: 40%;
     top: 0px;
     right: 0px;
     opacity: 0.8;
