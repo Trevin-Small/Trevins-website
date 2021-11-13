@@ -15,7 +15,7 @@
     align-items: center;
     overflow: hidden;
     height: inherit;
-    width: 45%;
+    width: 50%;
     top: 0px;
     left: 0px;
     position: fixed;
@@ -30,11 +30,10 @@
     text-align: center;
     position: fixed;
     height: inherit;
-    width: 40%;
+    width: 45%;
     top: 0px;
     right: 0px;
     opacity: 0.8;
-    padding-right: 5px;
 }
 .title-text {
     display: flex;
@@ -44,7 +43,7 @@
     overflow: hidden;
     color: white;
     width: auto;
-    height: 83%;
+    height: 84%;
     padding: 0px 10px 0px 10px;
     text-align: center;
     opacity: 0.825;
@@ -85,8 +84,8 @@
     align-items: center;
     height: auto;
     width: auto;
-    padding: 7px;
-    margin-right: 4px;
+    padding: 5px 7px 5px 7px;
+    margin-right: 5px;
     border-radius: 6px;
     font-size: 20px;
     fill: gray;

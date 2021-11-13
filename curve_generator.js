@@ -203,6 +203,13 @@ var Curves = (function newCurves() {
             }
         }, false);
 
+        canvas.addEventListener('touchmove', function(evt) {
+            if (!spaceMessageShowing){
+                mouseX = evt.touches[0].pageX;
+                mouseY = evt.touches[0].pageY;
+            }
+        }, false);
+
         document.addEventListener('keyup', function(evt) {
             if (delayed) {
                 switch (evt.code) {
@@ -285,15 +292,15 @@ function showElement(id, displayType){
 function rescaleIcons(){
     var icons = document.getElementsByName('icon-svg');
     var icon_boxes = document.getElementsByClassName("icon-box");
-    var heightBasedSize = Math.floor(window.innerHeight * 0.0775);
+    var heightBasedSize = Math.floor(window.innerHeight * 0.065);
     var widthBasedSize = Math.floor(((window.innerWidth * 0.45) / 3) - 20);
     var size = ((0.4 * window.innerWidth) / 3) < (window.innerHeight * 0.1) ? widthBasedSize : heightBasedSize;
     for (var i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
-        icon_boxes[i].style.padding = "7px";
+        icon_boxes[i].style.padding = "5px 7px 5px 7px";
     }
     var icons = document.getElementsByName('fractal-svg');
-    icons[0].style.height = (size * 0.875) + 'px';
+    icons[0].style.height = size + 'px';
     icons[0].style.padding = "0px";
 }
 
