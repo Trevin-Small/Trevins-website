@@ -16,7 +16,7 @@ var Curves = (function newCurves() {
     var siteTheme = 1;
     var siteColorThemes = {
         1: ["#4f0147", "#290025", "#11001c", "#ffffff"],
-        2: ["#ece071", "000000", "#dbdbdb", "#000000"]
+        2: ["#ece071", "#454545", "#dbdbdb", "#000000"]
     };
 
     function nextColorTheme(){
