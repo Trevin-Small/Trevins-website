@@ -182,7 +182,7 @@ var Curves = (function newCurves() {
         canvas.addEventListener('mousemove', function(evt) { 
             if (mouseMoveActive){
                 getMousePos(evt);
-                setTimeout(() => {delayed = true}, 2000);
+                setTimeout(() => {delayed = true}, 1500);
                 if (delayed && !arrowsHasShown){
                     hideElement('move-mouse-message');
                     showElement('arrows-message', 'flex'); 
@@ -192,9 +192,14 @@ var Curves = (function newCurves() {
         }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
-            if (!spaceMessageShowing){
-                mouseX = evt.touches[0].pageX;
-                mouseY = evt.touches[0].pageY;
+            if (mouseMoveActive){
+                getMousePos(evt);
+                setTimeout(() => {delayed = true}, 1500);
+                if (delayed && !arrowsHasShown){
+                    hideElement('move-mouse-message');
+                    showElement('arrows-message', 'flex'); 
+                    arrowsMessageShowing = true;
+                }
             }
         }, false);
 
@@ -277,16 +282,18 @@ function showElement(id, displayType){
     element.style.display = displayType;
 }
 
-function rescaleIcons(_height){
+function rescaleIcons(){
     var icons = document.getElementsByName('icon-svg');
     var icon_boxes = document.getElementsByClassName("icon-box");
+    var heightBasedSize = Math.floor(window.innerHeight * 0.0775);
+    var widthBasedSize = Math.floor(((window.innerWidth * 0.45) / 3) - (8 + 8 + 2));
+    var size = (0.45 * window.innerWidth) < (window.innerHeight * 0.09) ? widthBasedSize : heightBasedSize;
     for (var i = 0; i < icons.length; i++){
-        var newSize = Math.floor(_height * 0.0775).toString().concat('px');
-        icons[i].style.fontSize = newSize;
+        icons[i].style.fontSize = size + 'px';
         icon_boxes[i].style.padding = "0px 8px 0px 8px";
     }
     var icons = document.getElementsByName('fractal-svg');
-    icons[0].style.height = Math.floor(_height * 0.065).toString().concat('px');
+    icons[0].style.height = (size * 0.9) + 'px';
     icons[0].style.padding = "0px";
 }
 

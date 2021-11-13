@@ -30,11 +30,11 @@
     text-align: center;
     position: fixed;
     height: inherit;
-    width: 45%;
+    width: 40%;
     top: 0px;
     right: 0px;
     opacity: 0.8;
-    padding-right: 10px;
+    padding-right: 6px;
 }
 .title-text {
     display: flex;
@@ -83,10 +83,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85%;
+    height: auto;
     width: auto;
-    padding: 0px 8px 0px 8px;
-    margin-right: 6px;
+    padding: 7px;
+    margin-right: 5px;
     border-radius: 6px;
     font-size: 20px;
     fill: gray;
