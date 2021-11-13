@@ -28,6 +28,7 @@ var Curves = (function newCurves() {
         document.getElementById('header-divider').style.backgroundColor = siteColorThemes[siteTheme][1];
         document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2]; 
         document.getElementById('title-text').src = (siteTheme == 1) ? 'header-text-white.svg' : 'header-text-black.svg';
+        document.getElementsByName('fractal-svg')[0].src = (siteTheme == 1) ? 'fractal_white.svg' : 'fractal_black.svg';
         var logo = document.getElementById('logo'); 
         logo.style.fill = siteColorThemes[siteTheme][3];
         logo.style.stroke = siteColorThemes[siteTheme][3];
@@ -35,6 +36,7 @@ var Curves = (function newCurves() {
         var iconBoxes = document.getElementsByClassName('icon-box');
         for (var i = 0; i < iconBoxes.length; i++) {
             iconBoxes[i].style.color = siteColorThemes[siteTheme][3];
+            iconBoxes[i].style.fill = siteColorThemes[siteTheme][3];
         };
     }
 
