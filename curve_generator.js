@@ -4,10 +4,10 @@ var Curves = (function newCurves() {
     var CURVE_INTENSITY = 40;
     var SPEED_FACTOR = Math.random() * 0.015 + 0.01;
     var NUM_OF_CURVES = Math.round(Math.random() * 2 + 4);
-    var NUM_MIN_MAX = Math.random() * 10 + 15;
-    var DISTANCE_EXPONENT = 1.3;
-    var MAX_MOUSE_MOTION = 100;
-    var MOUSE_COEFFICIENT = 0.8;
+    var NUM_MIN_MAX = Math.random() * 15 + 10;
+    var DISTANCE_EXPONENT = 1.15;
+    var MAX_MOUSE_MOTION = 150;
+    var MOUSE_COEFFICIENT = 0.825;
 
     var colorScheme = Math.floor(Math.random() * 10) + 1;
     var mouseX = 0; 
@@ -286,14 +286,14 @@ function rescaleIcons(){
     var icons = document.getElementsByName('icon-svg');
     var icon_boxes = document.getElementsByClassName("icon-box");
     var heightBasedSize = Math.floor(window.innerHeight * 0.0775);
-    var widthBasedSize = Math.floor(((window.innerWidth * 0.45) / 3) - (8 + 8 + 2));
-    var size = (0.45 * window.innerWidth) < (window.innerHeight * 0.09) ? widthBasedSize : heightBasedSize;
+    var widthBasedSize = Math.floor(((window.innerWidth * 0.45) / 3) - 20);
+    var size = ((0.4 * window.innerWidth) / 3) < (window.innerHeight * 0.1) ? widthBasedSize : heightBasedSize;
     for (var i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
-        icon_boxes[i].style.padding = "0px 8px 0px 8px";
+        icon_boxes[i].style.padding = "7px";
     }
     var icons = document.getElementsByName('fractal-svg');
-    icons[0].style.height = (size * 0.9) + 'px';
+    icons[0].style.height = (size * 0.875) + 'px';
     icons[0].style.padding = "0px";
 }
 

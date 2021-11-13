@@ -34,7 +34,7 @@
     top: 0px;
     right: 0px;
     opacity: 0.8;
-    padding-right: 6px;
+    padding-right: 5px;
 }
 .title-text {
     display: flex;
@@ -86,7 +86,7 @@
     height: auto;
     width: auto;
     padding: 7px;
-    margin-right: 5px;
+    margin-right: 4px;
     border-radius: 6px;
     font-size: 20px;
     fill: gray;
