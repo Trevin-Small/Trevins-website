@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
   <g style="" transform="matrix(1.608403, 0, 0, 1.608403, -152.100739, -152.100739)">
-    <circle style="stroke-width: 7px; fill-rule: evenodd; rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="251" cy="251.319" r="78.556"/>
+    <circle style="stroke-width: 7px; fill-rule: evenodd; rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="251" cy="251.319" r="78.556"/>
     <g>
       <g transform="matrix(1, 0, 0, 1, 0, 1.319)">
         <g>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="164.2" r="44.151"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="120.3" r="18.321"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="205.35" cy="164" r="18.618"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="-333.151" r="44.151" transform="matrix(1, 0, 0, -1, 0, 0)"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="294.65" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="-377.062" r="18.321" transform="matrix(1, 0, 0, -1, 0, 0)"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="205.35" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="164.2" r="44.151"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="120.3" r="18.321"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="205.35" cy="164" r="18.618"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="-333.151" r="44.151" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="294.65" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="-377.062" r="18.321" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="205.35" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
         </g>
-        <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="294.65" cy="163" r="18.618"/>
+        <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="294.65" cy="163" r="18.618"/>
       </g>
       <g transform="matrix(0, 1, -1, 0, 498.681, 4.283171)">
         <g>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="164.2" r="44.151"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="120.3" r="18.321"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="205.35" cy="164" r="18.618"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="-333.151" r="44.151" transform="matrix(1, 0, 0, -1, 0, 0)"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="294.65" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="250" cy="-377.062" r="18.321" transform="matrix(1, 0, 0, -1, 0, 0)"/>
-          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="205.35" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="164.2" r="44.151"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="120.3" r="18.321"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="205.35" cy="164" r="18.618"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="-333.151" r="44.151" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="294.65" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="250" cy="-377.062" r="18.321" transform="matrix(1, 0, 0, -1, 0, 0)"/>
+          <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="205.35" cy="-334.362" r="18.618" transform="matrix(1, 0, 0, -1, 0, 0)"/>
         </g>
-        <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(63, 66, 64);" cx="294.65" cy="163" r="18.618"/>
+        <circle style="stroke-width: 5px; fill-rule: evenodd; stroke: rgb(236, 224, 113); fill: rgb(10, 10, 10);" cx="294.65" cy="163" r="18.618"/>
       </g>
     </g>
   </g>

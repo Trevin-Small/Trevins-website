@@ -30,7 +30,7 @@ var Curves = (function newCurves() {
         document.getElementsByName('fractal-svg')[0].src = (siteTheme == 1) ? 'fractal_white.svg' : 'fractal_black.svg';
 
         var iconBoxes = document.getElementsByClassName('icon-box');
-        for (var i = 0; i < iconBoxes.length; i++) {
+        for (var i = 0; i < iconBoxes.length - 1; i++) {
             iconBoxes[i].style.color = siteColorThemes[siteTheme][3];
             iconBoxes[i].style.fill = siteColorThemes[siteTheme][3];
         };
