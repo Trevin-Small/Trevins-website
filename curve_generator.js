@@ -9,7 +9,6 @@ var Curves = (function newCurves() {
     var MAX_MOUSE_MOTION = 100;
     var MOUSE_COEFFICIENT = 0.8;
 
-    var isDisplayed = false;
     var colorScheme = Math.floor(Math.random() * 10) + 1;
     var mouseX = 0; 
     var mouseY = 0;
@@ -29,24 +28,12 @@ var Curves = (function newCurves() {
         document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2]; 
         document.getElementById('title-text').src = (siteTheme == 1) ? 'header-text-white.svg' : 'header-text-black.svg';
         document.getElementsByName('fractal-svg')[0].src = (siteTheme == 1) ? 'fractal_white.svg' : 'fractal_black.svg';
-        var logo = document.getElementById('logo'); 
-        logo.style.fill = siteColorThemes[siteTheme][3];
-        logo.style.stroke = siteColorThemes[siteTheme][3];
 
         var iconBoxes = document.getElementsByClassName('icon-box');
         for (var i = 0; i < iconBoxes.length; i++) {
             iconBoxes[i].style.color = siteColorThemes[siteTheme][3];
             iconBoxes[i].style.fill = siteColorThemes[siteTheme][3];
         };
-    }
-
-    function invertLogo() {
-        if (isDisplayed) {
-            hideElement('title-t')
-        } else {
-            showElement('title-t', 'flex');
-        }
-        isDisplayed = !isDisplayed;
     }
 
     function newWaves(){
@@ -165,13 +152,10 @@ var Curves = (function newCurves() {
         canvas.height = height;
         parent.appendChild(canvas);
         ctx.fillStyle = '#111';
-        var spaceMessageShowing = true;
-        var clickMessageShowing = false;
         var mouseMoveActive = false;
         var arrowsMessageShowing = false;
-        var delayed = false;
         var arrowsHasShown = false;
-        var spacedTwice = false;
+        var delayed = false;
         var count = 0;
         resize();
 
@@ -184,50 +168,25 @@ var Curves = (function newCurves() {
             startRender();
         }; 
 
-        document.addEventListener('keyup', function(evt) {
-            if (evt.code === 'Space'){
-                newWaves();
-                count++;
-                if (spaceMessageShowing && count == 2){
-                    hideElement('spacebar-message');
-                    showElement('click-message', 'flex');
-                    count = 0;
-                    spaceMessageShowing = false;
-                    clickMessageShowing = true;
-                    spacedTwice = true;
-                }
-            } else if (delayed) {
-                switch (evt.code) {
-                    case 'ArrowLeft':
-                    case 'ArrowRight':
-                    case 'ArrowDown':
-                    case 'ArrowUp':
-                    case 'KeyW':
-                    case 'KeyA':
-                    case 'KeyS':
-                    case 'KeyD':
-                        if (arrowsMessageShowing) {
-                            hideElement('arrows-message');
-                        }
-                        nextColorTheme();
-                        break;
-                    default:
-                        break;
-                }
-            }
-        });
-
         canvas.addEventListener('click', function(evt) {
-            if (!spaceMessageShowing && spacedTwice){
-                invertLogo();
-                if (clickMessageShowing){
-                    hideElement('click-message');
-                    clickMessageShowing = false;
-                } else {
-                    mouseMoveActive = true;
-                }
-                if (!arrowsHasShown && mouseMoveActive){
-                    showElement('move-mouse-message', 'flex');
+            newWaves();
+            count++;
+            if (count == 2 && !mouseMoveActive){
+                count = 0;
+                hideElement('click-message');
+                showElement('move-mouse-message', 'flex');
+                mouseMoveActive = true;
+            }
+        }, false);
+
+        canvas.addEventListener('mousemove', function(evt) { 
+            if (mouseMoveActive){
+                getMousePos(evt);
+                setTimeout(() => {delayed = true}, 2000);
+                if (delayed && !arrowsHasShown){
+                    hideElement('move-mouse-message');
+                    showElement('arrows-message', 'flex'); 
+                    arrowsMessageShowing = true;
                 }
             }
         }, false);
@@ -239,21 +198,28 @@ var Curves = (function newCurves() {
             }
         }, false);
 
-        canvas.addEventListener('mousemove', function(evt) { 
-            if (mouseMoveActive){
-                getMousePos(evt);
-                setTimeout(() => {delayed = true}, 2000);
-                if (delayed && !arrowsHasShown){
-                    hideElement('move-mouse-message');
-                    setTimeout(() => {showElement('arrows-message', 'flex'); arrowsMessageShowing = true}, 1000); 
-                    arrowsHasShown = true;
+        document.addEventListener('keyup', function(evt) {
+            if (delayed) {
+                switch (evt.code) {
+                    case 'ArrowLeft':
+                    case 'ArrowRight':
+                    case 'ArrowDown':
+                    case 'ArrowUp':
+                    case 'KeyW':
+                    case 'KeyA':
+                    case 'KeyS':
+                    case 'KeyD':
+                        if (arrowsMessageShowing) {
+                            hideElement('arrows-message');
+                            arrowsMessageShowing = false;
+                            arrowsHasShown = true;
+                        }
+                        nextColorTheme();
+                        break;
+                    default:
+                        break;
                 }
             }
-        }, false);
-
-        var canvasImage = document.getElementsByClassName('canvas-image');
-        canvasImage[0].addEventListener('click', function(evt) {
-            invertLogo();
         });
 
         startRender();
