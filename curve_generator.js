@@ -192,6 +192,7 @@ var Curves = (function newCurves() {
         }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
+            evt.preventDefault();
             if (mouseMoveActive){
                 getMousePos(evt);
                 setTimeout(() => {delayed = true}, 1500);
