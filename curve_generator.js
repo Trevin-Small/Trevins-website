@@ -205,7 +205,7 @@ var Curves = (function newCurves() {
         }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
-            if (!spaceMessageShowing){
+            if (mouseMoveActive){
                 mouseX = evt.touches[0].pageX;
                 mouseY = evt.touches[0].pageY;
             }
