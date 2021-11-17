@@ -192,6 +192,10 @@ var Curves = (function newCurves() {
         }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
+            if (mouseMoveActive){
+                mouseX = evt.touches[0].pageX;
+                mouseY = evt.touches[0].pageY;
+            }
             evt.preventDefault();
             if (mouseMoveActive){
                 getMousePos(evt);
@@ -201,13 +205,6 @@ var Curves = (function newCurves() {
                     showElement('arrows-message', 'flex'); 
                     arrowsMessageShowing = true;
                 }
-            }
-        }, false);
-
-        canvas.addEventListener('touchmove', function(evt) {
-            if (mouseMoveActive){
-                mouseX = evt.touches[0].pageX;
-                mouseY = evt.touches[0].pageY;
             }
         }, false);
 
