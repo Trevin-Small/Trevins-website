@@ -170,68 +170,36 @@ var Curves = (function newCurves() {
 
         canvas.addEventListener('click', function(evt) {
             newWaves();
-            count++;
-            if (count == 2 && !mouseMoveActive){
-                count = 0;
-                hideElement('click-message');
-                showElement('move-mouse-message', 'flex');
-                mouseMoveActive = true;
-            }
         }, false);
 
         canvas.addEventListener('mousemove', function(evt) { 
-            if (mouseMoveActive){
-                getMousePos(evt);
-                setTimeout(() => {delayed = true}, 1500);
-                if (delayed && !arrowsHasShown){
-                    hideElement('move-mouse-message');
-                    showElement('arrows-message', 'flex'); 
-                    arrowsMessageShowing = true;
-                }
-            }
+            getMousePos(evt);
         }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
             evt.preventDefault();
-            if (mouseMoveActive){
-                getMousePos(evt);
-                setTimeout(() => {delayed = true}, 1500);
-                if (delayed && !arrowsHasShown){
-                    hideElement('move-mouse-message');
-                    showElement('arrows-message', 'flex'); 
-                    arrowsMessageShowing = true;
-                }
-            }
+            getMousePos(evt);
         }, false);
 
         canvas.addEventListener('touchmove', function(evt) {
-            if (mouseMoveActive){
-                mouseX = evt.touches[0].pageX;
-                mouseY = evt.touches[0].pageY;
-            }
+            mouseX = evt.touches[0].pageX;
+            mouseY = evt.touches[0].pageY;
         }, false);
 
         document.addEventListener('keyup', function(evt) {
-            if (delayed) {
-                switch (evt.code) {
-                    case 'ArrowLeft':
-                    case 'ArrowRight':
-                    case 'ArrowDown':
-                    case 'ArrowUp':
-                    case 'KeyW':
-                    case 'KeyA':
-                    case 'KeyS':
-                    case 'KeyD':
-                        if (arrowsMessageShowing) {
-                            hideElement('arrows-message');
-                            arrowsMessageShowing = false;
-                            arrowsHasShown = true;
-                        }
-                        nextColorTheme();
-                        break;
-                    default:
-                        break;
-                }
+            switch (evt.code) {
+                case 'ArrowLeft':
+                case 'ArrowRight':
+                case 'ArrowDown':
+                case 'ArrowUp':
+                case 'KeyW':
+                case 'KeyA':
+                case 'KeyS':
+                case 'KeyD':
+                    nextColorTheme();
+                    break;
+                default:
+                    break;
             }
         });
 
@@ -272,13 +240,6 @@ window.onload = function() {
     rescaleIcons(window.innerHeight);
     rescaleFont();
 }
-
-/*
-function copyEmail() {  
-    showElement('email-alert-box', "block");
-    navigator.clipboard.writeText("someone@gmail.com");
-    setTimeout(() => {hideElement('email-alert-box')}, 1500);
-}*/
 
 function hideElement(id){
     var element = document.getElementById(id);
