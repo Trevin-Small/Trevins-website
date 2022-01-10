@@ -9,6 +9,9 @@
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     </head>
     <body class="no-margins" id="background">
+        <div class="fixed-background" id="fixed-background">
+            <script src="curve_generator.js"></script>
+        </div>
         <div class="header-bar" id="header">
             <div class="title-left">
                 <div class="title-text">
@@ -28,22 +31,18 @@
                 <div class="divider" id="header-divider"></div>
             </div>
         </div>
-        <div class="fixed-background" id="fixed-background">
-            <script src="curve_generator.js"></script>
+        <div class="message-box" id="welcome">
+            <h3>Nice to meet you, I'm Trevin! ✌️</h3>
+            <p>
+                Welcome to my personal website! 
+                <br>
+                <br>
+                I'm a Computer Science student at Purdue Univeristy, <br>
+                and this website is a personal project of mine that I <br>
+                update with some information about myself.
+            </p>
+            <zero-md src="about-me.md"></zero-md>
         </div>
-        <div class="scroll" id="scrolling-text">
-            <div class="message-box" id="welcome">
-                <h3>Nice to meet you, I'm Trevin! ✌️</h3>
-                <p>
-                    Welcome to my personal website! 
-                    <br>
-                    <br>
-                    I'm a Computer Science student at Purdue Univeristy, <br>
-                    and this website is a personal project of mine that I <br>
-                    update with some information about myself.
-                </p>
-                <zero-md src="example.md"></zero-md>
-            </div>
         </div>
     </body>
 </html>

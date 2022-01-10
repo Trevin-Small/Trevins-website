@@ -1,12 +1,10 @@
-# Nice to meet you, I'm @Trevin-Small <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">
-
-#### - [Mesmerizing Javascript Animations! (Hit Spacebar/Click)](https://trevin-small.github.io/Fractals-JS/)
-#### - [Checkout My Website! 🔥  *Mobile not supported yet :(*](https://trevin-small.github.io/Trevins-website/)
-#### - [My Latest Personal Project!](https://www.werms-nfts.com/)
-
 ### 🙋‍♂️ About me 
 ---
 ![About me code](./readme_about_me.png)
+
+### 💻 Some of my Work
+#### - [Mesmerizing Javascript Animations! (Hit Spacebar/Click)](https://trevin-small.github.io/Fractals-JS/)
+#### - [My Latest Personal Project!](https://www.werms-nfts.com/)
 
 ### ⚙️ Technologies/Tools
 ---
@@ -25,11 +23,6 @@
 ![](https://img.shields.io/badge/Platforms-Arduino-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=ffc72e)
 ![](https://img.shields.io/badge/Platforms-Raspberry_Pi-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=ffc72e)
 
-### 📫 Contact me: 
----
-- [![Linkedin](https://i.stack.imgur.com/gVE0j.png) LinkedIn](https://www.linkedin.com/in/trevin-klint-small/)
-&nbsp;
-
 ### 📈 Stats
 ---
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Trevin-Small&count_private=true&show_icons=true&theme=cobalt)](https://github.com/anuraghazra/github-readme-stats)
@@ -39,8 +32,3 @@
 <br />
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) ![(Not a Robot)](./verified-not-a-robot.svg) [![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
-
-<!---
-Trevin-Small/Trevin-Small is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->

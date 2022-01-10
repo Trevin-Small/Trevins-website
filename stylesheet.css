@@ -106,43 +106,39 @@
 .fixed-background {
     margin: 0;
     left: 0px;
-    bottom: -2px;
+    top: 0px;
     position: fixed;
     overflow: hidden;
     text-align: center;
 }
-.scroll {
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
 
 .message-box {
     left: 50vw;
-    top: 45vh;
+    position: relative;
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
     padding: 5px 40px 5px 40px;
-    position: absolute;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: center;
     text-align: left;
-    opacity: 0.825;
+    opacity: 0.75;
     border-radius: 20px;
     background-color: darkslategray;
     border: 5px solid black;
     color: white;
     font-family:'Courier New', Courier, monospace;
     font-size: 2.75vmin;
-    pointer-events: none;
+}
+.top-level{
+    top: 10%;
+    left: 0px;
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    position: fixed;
 }
 .selectDisable {
     -webkit-user-select: none;

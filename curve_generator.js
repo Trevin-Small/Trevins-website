@@ -148,16 +148,9 @@ var Curves = (function newCurves() {
     }
 
     function init(parent) {
-        canvas.width = width;
-        canvas.height = height;
+        resize();
         parent.appendChild(canvas);
         ctx.fillStyle = '#111';
-        var mouseMoveActive = false;
-        var arrowsMessageShowing = false;
-        var arrowsHasShown = false;
-        var delayed = false;
-        var count = 0;
-        resize();
 
         window.onresize = function() {
             stopRender();
