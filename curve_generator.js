@@ -270,3 +270,21 @@ function rescaleFont() {
         }
     }
 }
+
+function hideElement(id){
+    var element = document.getElementById(id);
+    element.style.display = "none";
+}
+
+function showElement(id, displayType){
+    var element = document.getElementById(id);
+    element.style.display = displayType;
+}
+
+function copyEmail() {  
+    showElement('email-alert-box', "block");
+    navigator.clipboard.writeText("contact@trevinsmall.com");
+    setTimeout(function(){
+        hideElement('email-alert-box');
+    }, 1000);
+}
