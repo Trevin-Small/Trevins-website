@@ -153,11 +153,14 @@ var Curves = (function newCurves() {
         }; 
 
         topLayer.addEventListener('click', function(evt) {
-            newWaves();
             if (!scroll) {
                 enableScroll();
+                scroll = true;
+                newWaves();
             } else {
                 enableMobileCurveMove();
+                scroll = false;
+                newWaves();
             }
         }, false);
 
@@ -205,11 +208,7 @@ var Curves = (function newCurves() {
 
     function enableMobileCurveMove() {
         topLayer.addEventListener('touchmove', function(evt) {
-            evt.preventDefault();
-            getMousePos(evt);
-        }, false);
-
-        topLayer.addEventListener('touchmove', function(evt) {
+            preventDefault(evt);
             mouseX = evt.touches[0].pageX;
             mouseY = evt.touches[0].pageY;
         }, false);
@@ -217,6 +216,10 @@ var Curves = (function newCurves() {
 
     function enableScroll() {
         document.body.removeEventListener('touchmove', preventDefault);
+    }
+
+    function preventDefault(e) {
+        e.preventDefault();
     }
 
     return {
