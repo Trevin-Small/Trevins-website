@@ -8,12 +8,13 @@
     text-align: center;
     position: fixed;
     height: auto;
-    width: 5vw;
-    top: 12vh;
+    width: auto;
+    max-width: 13vw;
+    top: 15vh;
     right: 0.5vw;
     background-color: #4f0147;
-    border-radius: 20px;
-    padding: 5px;
+    border-radius: 14px;
+    padding: 5px 5px 5px 5px;
 }
 .icon-box {
     display: flex;
@@ -21,10 +22,9 @@
     align-items: center;
     height: auto;
     width: auto;
-    padding: 7px 7px 7px 7px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 6px;
+    padding: 5px 5px 5px 5px;
+    margin: 2px;
+    border-radius: 10px;
     font-size: 20px;
     fill: gray;
     color:white;
@@ -65,7 +65,7 @@
     left: 50vw;
     top: 5vh;
     position: relative;
-    width: 60vw;
+    width: 57vw;
     height: auto;
     transform: translate(-50%, 0);
     display: flex;
