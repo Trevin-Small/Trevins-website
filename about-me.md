@@ -1,12 +1,12 @@
-### 🙋‍♂️ About me 
+### 🙋‍♂️  About me 
 ---
 ![About me code](./readme_about_me.png)
 
-### 💻 Some of my Work
+### 💻  Some of my Work
 #### - [Mesmerizing Javascript Animations! (Hit Spacebar/Click)](https://trevin-small.github.io/Fractals-JS/)
 #### - [My Latest Personal Project!](https://www.werms-nfts.com/)
 
-### ⚙️ Technologies/Tools
+### ⚙️  Technologies/Tools
 ---
 ![](https://img.shields.io/badge/OS-macOS-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=f571b1)
 ![](https://img.shields.io/badge/Editor-VS_code-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=637eeb)
@@ -23,7 +23,7 @@
 ![](https://img.shields.io/badge/Platforms-Arduino-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=ffc72e)
 ![](https://img.shields.io/badge/Platforms-Raspberry_Pi-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=ffc72e)
 
-### 📈 Stats
+### 📈  Stats
 ---
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Trevin-Small&count_private=true&show_icons=true&theme=cobalt)](https://github.com/anuraghazra/github-readme-stats)
 
