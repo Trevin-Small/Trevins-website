@@ -232,8 +232,10 @@ var Curves = (function newCurves() {
 
 window.onload = function() {
     Curves.init(document.body);
-    rescaleIcons(window.innerHeight);
-    rescaleFont();
+    setTimeout(function() {
+        rescaleFont();
+        rescaleIcons();
+    }, 200);
 }
 
 function hideElement(id){
