@@ -3,7 +3,7 @@ var Curves = (function newCurves() {
     var raf_ID = 0;
     var CURVE_INTENSITY = 40;
     var SPEED_FACTOR = Math.random() * 0.015 + 0.01;
-    var NUM_OF_CURVES = Math.round(Math.random() * 2 + 4);
+    var NUM_OF_CURVES = Math.round(Math.random() * 2 + 3);
     var NUM_MIN_MAX = Math.random() * 15 + 10;
     var DISTANCE_EXPONENT = 1.15;
     var MAX_MOUSE_MOTION = 150;
@@ -124,14 +124,12 @@ var Curves = (function newCurves() {
             var offset = 0;
             for (var x = 0; x <= width + (width / 4); x += width / NUM_MIN_MAX) {
                 var angle = Math.random() * 360;
-                if (i === 0) offset = Math.random() * 200 + 200;
-                if (i === 1) offset = Math.random() * 160 + 140;                
-                if (i === 2) offset = Math.random() * 130 + 90;                
-                if (i === 3) offset = Math.random() * 100 + 40;
-                if (i === 4) offset = Math.random() * 80 - 10;                
-                if (i === 5) offset = Math.random() * 60 - 60;
-                if (i === 6) offset = Math.random() * 30 - 120;
-                if (i === 7) offset = Math.random() * 20 - 190;
+                if (i === 0) offset = Math.random() * 200 + 210;
+                if (i === 1) offset = Math.random() * 160 + 180;                
+                if (i === 2) offset = Math.random() * 130 + 150;                
+                if (i === 3) offset = Math.random() * 100 + 120;
+                if (i === 4) offset = Math.random() * 80 + 90;                
+                if (i === 5) offset = Math.random() * 60 + 60;
                 offset -= x / 20;
                 var point = { 
                     x: x, 
