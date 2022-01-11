@@ -23,17 +23,7 @@ var Curves = (function newCurves() {
         if (siteTheme > 2){
             siteTheme = 1;
         }
-        document.getElementById('header').style.backgroundColor = siteColorThemes[siteTheme][0];
-        document.getElementById('header-divider').style.backgroundColor = siteColorThemes[siteTheme][1];
         document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2]; 
-        document.getElementById('title-text').src = (siteTheme == 1) ? 'header-text-white.svg' : 'header-text-black.svg';
-        document.getElementsByName('fractal-svg')[0].src = (siteTheme == 1) ? 'fractal_white.svg' : 'fractal_black.svg';
-
-        var iconBoxes = document.getElementsByClassName('icon-box');
-        for (var i = 0; i < iconBoxes.length - 1; i++) {
-            iconBoxes[i].style.color = siteColorThemes[siteTheme][3];
-            iconBoxes[i].style.fill = siteColorThemes[siteTheme][3];
-        };
     }
 
     function newWaves(){
@@ -151,6 +141,7 @@ var Curves = (function newCurves() {
         parent.appendChild(canvas);
         canvas.setAttribute("class", "canvas");
         ctx.fillStyle = '#111';
+        var scroll = false;
 
         window.onresize = function() {
             stopRender();
@@ -163,20 +154,15 @@ var Curves = (function newCurves() {
 
         topLayer.addEventListener('click', function(evt) {
             newWaves();
+            if (!scroll) {
+                enableScroll();
+            } else {
+                enableMobileCurveMove();
+            }
         }, false);
 
         topLayer.addEventListener('mousemove', function(evt) { 
             getMousePos(evt);
-        }, false);
-
-        topLayer.addEventListener('touchmove', function(evt) {
-            evt.preventDefault();
-            getMousePos(evt);
-        }, false);
-
-        topLayer.addEventListener('touchmove', function(evt) {
-            mouseX = evt.touches[0].pageX;
-            mouseY = evt.touches[0].pageY;
         }, false);
 
         document.addEventListener('keyup', function(evt) {
@@ -185,10 +171,6 @@ var Curves = (function newCurves() {
                 case 'ArrowRight':
                 case 'ArrowDown':
                 case 'ArrowUp':
-                case 'KeyW':
-                case 'KeyA':
-                case 'KeyS':
-                case 'KeyD':
                     nextColorTheme();
                     break;
                 default:
@@ -196,6 +178,7 @@ var Curves = (function newCurves() {
             }
         });
 
+        enableMobileCurveMove();
         startRender();
     }
 
@@ -218,6 +201,22 @@ var Curves = (function newCurves() {
     function resize() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
+    }
+
+    function enableMobileCurveMove() {
+        topLayer.addEventListener('touchmove', function(evt) {
+            evt.preventDefault();
+            getMousePos(evt);
+        }, false);
+
+        topLayer.addEventListener('touchmove', function(evt) {
+            mouseX = evt.touches[0].pageX;
+            mouseY = evt.touches[0].pageY;
+        }, false);
+    }
+
+    function enableScroll() {
+        document.body.removeEventListener('touchmove', preventDefault);
     }
 
     return {
@@ -286,5 +285,5 @@ function copyEmail() {
     navigator.clipboard.writeText("contact@trevinsmall.com");
     setTimeout(function(){
         hideElement('email-alert-box');
-    }, 1000);
+    }, 1500);
 }
