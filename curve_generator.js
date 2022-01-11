@@ -64,7 +64,7 @@ var Curves = (function newCurves() {
         ctx.strokeStyle = '#fff';
         ctx.fillStyle = 'rgba(255, 255, 255, 0.16)';
         ctx.fillStyle = this.color;
-        ctx.globalAlpha = 0.60;
+        ctx.globalAlpha = 0.80;
         ctx.beginPath();
         ctx.moveTo(this.points[0].x, this.points[0].y);
         this.points.forEach(function(point, i) {
@@ -232,10 +232,8 @@ var Curves = (function newCurves() {
 
 window.onload = function() {
     Curves.init(document.body);
-    setTimeout(function() {
-        rescaleFont();
-        rescaleIcons();
-    }, 200);
+    rescaleFont();
+    rescaleIcons();
 }
 
 function hideElement(id){
