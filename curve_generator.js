@@ -110,6 +110,7 @@ var Curves = (function newCurves() {
     };
     
     var canvas = document.createElement('canvas');
+    var topLayer = document.getElementById('top-layer');
     var ctx = canvas.getContext('2d');
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -150,6 +151,7 @@ var Curves = (function newCurves() {
     function init(parent) {
         resize();
         parent.appendChild(canvas);
+        canvas.setAttribute("class", "canvas");
         ctx.fillStyle = '#111';
 
         window.onresize = function() {
@@ -161,20 +163,20 @@ var Curves = (function newCurves() {
             startRender();
         }; 
 
-        canvas.addEventListener('click', function(evt) {
+        topLayer.addEventListener('click', function(evt) {
             newWaves();
         }, false);
 
-        canvas.addEventListener('mousemove', function(evt) { 
+        topLayer.addEventListener('mousemove', function(evt) { 
             getMousePos(evt);
         }, false);
 
-        canvas.addEventListener('touchmove', function(evt) {
+        topLayer.addEventListener('touchmove', function(evt) {
             evt.preventDefault();
             getMousePos(evt);
         }, false);
 
-        canvas.addEventListener('touchmove', function(evt) {
+        topLayer.addEventListener('touchmove', function(evt) {
             mouseX = evt.touches[0].pageX;
             mouseY = evt.touches[0].pageY;
         }, false);

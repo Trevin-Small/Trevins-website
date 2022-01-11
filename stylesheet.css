@@ -119,6 +119,7 @@
     height: 90vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    pointer-events: all;
 }
 .message-box {
     left: 50vw;
@@ -133,7 +134,7 @@
     justify-content: left;
     align-items: center;
     text-align: left;
-    opacity: 0.85;
+    opacity: 0.875;
     border-radius: 20px;
     background-color: darkslategray;
     border: 5px solid black;
@@ -142,16 +143,12 @@
     font-size: 2.75vmin;
     pointer-events: all;
 }
-.md-html {
-    color: white;
-    background-color: darkslategray;
-    opacity: 0.85;
-}
 .spacer{
     height: 10vh;
     width: inherit;
     top: auto;
     position: relative;
+    pointer-events: none;
 }
 .top-level{
     top: 10%;
@@ -167,4 +164,7 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+.canvas {
+    pointer-events: none;
 }
