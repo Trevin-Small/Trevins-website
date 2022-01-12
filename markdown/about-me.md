@@ -4,11 +4,43 @@
 
 ### 💻  Some of my Work
 ---
-#### - [Mesmerizing Javascript Animations! (Hit Spacebar/Click)](https://trevin-small.github.io/Fractals-JS/)
-#### - [My Latest Personal Project!](https://www.werms-nfts.com/)
-
-| | |
-|:-:|:-:|
+<table>
+    <tr>
+        <td>
+            <img alt="Fractals-JS" src="../images/fractals.png" href="https://trevin-small.github.io/Fractals-JS/"> <br> 
+            <a href="https://trevin-small.github.io/Fractals-JS/"><h4>JS Fractals</h4></a>
+         </td>
+        <td>
+            <img alt="werms. NFT's" src="../images/werms.png" href="https://www.werms-nfts.com/"> 
+            <br> 
+            <a href="https://www.werms-nfts.com/"><h4>Werms NFT's</h4></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img alt="Driggs Title Website" src="../images/driggs.png" href="https://github.com/Trevin-Small/Data-Scraper-V2"> 
+            <br> 
+            <a href="https://github.com/Trevin-Small/Data-Scraper-V2"><h4>Driggs Title Data Entry Bot</h4></a>
+        </td>
+        <td>
+            <img alt="Physics Engine" src="../images/physics.png" href="https://github.com/Trevin-Small/Python-Physics-Engine"> 
+            <br> 
+            <a href="https://github.com/Trevin-Small/Python-Physics-Engine"><h4>Python Physics Engine</h4></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img alt="Snake" src="../images/snake.png" href="https://trevin-small.github.io/snake-js/"> 
+            <br> 
+            <a href="https://trevin-small.github.io/snake-js/"><h4>Snake Game (Unfinished)</h4></a>
+        </td>
+        <td>
+            <img alt="Physics Engine" src="../images/physics.png" href="https://github.com/Trevin-Small/Python-Physics-Engine"> 
+            <br> 
+            <a href="https://github.com/Trevin-Small/Python-Physics-Engine"><h4>Python Physics Engine</h4></a>
+        </td>
+    </tr>
+</table>
 
 ### ⚙️  Technologies/Tools
 ---

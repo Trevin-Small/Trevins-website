@@ -141,7 +141,7 @@
 }
 .markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{
     margin-top:0;
-    margin-bottom:0
+    margin-bottom:0;
 }
 .markdown-body h1{
     font-size:32px
@@ -475,9 +475,15 @@
 .markdown-body blockquote>:last-child{
     margin-bottom:0
 }
-.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{
+.markdown-body h1,.markdown-body h2,.markdown-body h3 {
     margin-top:24px;
     margin-bottom:16px;
+    font-weight:600;
+    line-height:1.25
+}
+.markdown-body h4,.markdown-body h5,.markdown-body h6{
+    margin-top:6px;
+    margin-bottom:8px;
     font-weight:600;
     line-height:1.25
 }
@@ -543,14 +549,14 @@
     font-weight:600
 }
 .markdown-body table td,.markdown-body table th{
-    padding:6px 13px;
-    border:1px solid black
+    padding:0px;
+    border:10px solid black;
 }
 .markdown-body table tr{
-    background-color:transparent;
+    background-color:#4f0147;
 }
 .markdown-body table tr:nth-child(2n){
-    background-color:transparent;
+    background-color:#4f0147;
 }
 .markdown-body img{
     max-width:100%;

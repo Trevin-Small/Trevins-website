@@ -1,0 +1,14 @@
+table {
+    border-collapse:separate;
+    border-radius:8px;
+}
+td {
+    width: 50%;
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+    text-align: center;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
