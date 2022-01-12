@@ -28,7 +28,10 @@ var Curves = (function newCurves() {
 
     function newWaves(){
         NUM_OF_CURVES = Math.round(Math.random() * 1 + 5);
-        NUM_MIN_MAX = Math.random() * 15 + 15;
+        NUM_MIN_MAX = Math.random() * 15 + 10;
+        if (width < height) {
+            NUM_MIN_MAX = Math.random() * 10 + 8;
+        }
         colorScheme += 1;
         if (colorScheme > 10){
             colorScheme = 1;
@@ -142,6 +145,10 @@ var Curves = (function newCurves() {
         canvas.setAttribute("class", "canvas");
         ctx.fillStyle = '#111';
         var on = true;
+
+        if (width < height) {
+            NUM_MIN_MAX = Math.random() * 10 + 8;
+        }
 
         window.onresize = function() {
             stopRender();
@@ -272,7 +279,7 @@ function rescaleIcons(){
     icons[0].style.height = size + 'px';
     icons[0].style.padding = "0px";
     var switchIcon = document.getElementsByName('switch');
-    switchIcon[0].style.height = (size / 1.4) + 'px';
+    switchIcon[0].style.height = (size / 1.8) + 'px';
     switchIcon[0].style.padding = "0px";
 }
 
