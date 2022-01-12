@@ -216,16 +216,18 @@ var Curves = (function newCurves() {
         height = canvas.height = window.innerHeight;
     }
 
+    function detectTouchMove(evt) {
+        preventDefault(evt);
+        mouseX = evt.touches[0].pageX;
+        mouseY = evt.touches[0].pageY;
+    }
+
     function enableMobileCurveMove() {
-        topLayer.addEventListener('touchmove', function(evt) {
-            preventDefault(evt);
-            mouseX = evt.touches[0].pageX;
-            mouseY = evt.touches[0].pageY;
-        }, false);
+        topLayer.addEventListener('touchmove',detectTouchMove, false);
     }
 
     function enableScroll() {
-        topLayer.removeEventListener('touchmove', preventDefault);
+        topLayer.removeEventListener('touchmove', detectTouchMove);
     }
 
     function preventDefault(e) {
@@ -287,7 +289,7 @@ function rescaleFont() {
 }
 
 function hideElement(id){
-    document.getElementById(id).style.display = "hidden";
+    document.getElementById(id).style.visibility = "hidden";
 }
 
 function showElement(id, displayType){
