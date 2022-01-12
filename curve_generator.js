@@ -225,7 +225,7 @@ var Curves = (function newCurves() {
     }
 
     function enableScroll() {
-        document.body.removeEventListener('touchmove', preventDefault);
+        topLayer.removeEventListener('touchmove', preventDefault);
     }
 
     function preventDefault(e) {
