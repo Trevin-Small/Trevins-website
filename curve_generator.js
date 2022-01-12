@@ -153,15 +153,7 @@ var Curves = (function newCurves() {
         }; 
 
         topLayer.addEventListener('click', function(evt) {
-            if (!scroll) {
-                enableScroll();
-                scroll = true;
-                newWaves();
-            } else {
-                enableMobileCurveMove();
-                scroll = false;
-                newWaves();
-            }
+            newWaves();
         }, false);
 
         topLayer.addEventListener('mousemove', function(evt) { 
@@ -181,7 +173,6 @@ var Curves = (function newCurves() {
             }
         });
 
-        enableMobileCurveMove();
         startRender();
     }
 
