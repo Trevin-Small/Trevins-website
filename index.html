@@ -11,11 +11,7 @@
     <body class="no-margins" id="background">
         <div class="scroll" id="top-layer">
             <div class="message-box" id="welcome">
-                <h3>Nice to meet you, I'm Trevin! ✌️</h3>
-                <p>
-                    I'm a Freshman at Purdue University studying Computer Science <br>
-                    with a minor in Design and Innovation.
-                </p>
+                <img src="header-text-white.svg" id="name-logo" style="background-color:transparent;padding:10px;position:inherit;">
                 <zero-md src="about-me.md">
                     <template>
                         <link rel="stylesheet" href="markdown.css">
@@ -26,6 +22,9 @@
             <div class="spacer"></div>
         </div>
         <div class="title-right">
+            <div class="icon-box" id="switch-div">
+                <img src="switch-on.svg" name="switch"></i>
+            </div>
             <div title="LinkedIn" class="icon-box" id="linkedin-icon" onclick="window.open('https://linkedin.com/in/trevin-klint-small');" style="cursor:pointer;">
                 <i class="fa fa-linkedin" name="icon-svg" style="fill:white"></i>
             </div>
@@ -39,7 +38,7 @@
                 <img src="fractal_white.svg" class="selectDisable" name="fractal-svg" style="stroke:black">
             </div>
         </div>
-        <div class="email-message" id="email-alert-box" style="display:none;">
+        <div class="email-message" id="email-alert-box" style="display:block;visibility:hidden;">
             <h2>Email copied to clipboard.</h2>
         </div>
         <div class="fixed-background" id="fixed-background">

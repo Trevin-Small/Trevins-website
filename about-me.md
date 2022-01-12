@@ -24,7 +24,7 @@
 <img src="https://img.shields.io/badge/Platforms-Arduino-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=ffc72e" style="background-color:transparent;">
 <img src="https://img.shields.io/badge/Platforms-Raspberry_Pi-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=ffc72e" style="background-color:transparent;">
 
-### 📈  Stats
+### 📈  GitHub Stats
 ---
 <img src="https://github-readme-stats.vercel.app/api?username=Trevin-Small&count_private=true&show_icons=true&theme=cobalt" style="background-color:transparent;">
 

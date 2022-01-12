@@ -141,7 +141,7 @@ var Curves = (function newCurves() {
         parent.appendChild(canvas);
         canvas.setAttribute("class", "canvas");
         ctx.fillStyle = '#111';
-        var scroll = false;
+        var on = true;
 
         window.onresize = function() {
             stopRender();
@@ -158,6 +158,25 @@ var Curves = (function newCurves() {
 
         topLayer.addEventListener('mousemove', function(evt) { 
             getMousePos(evt);
+        }, false);
+
+        document.getElementById('switch-div').addEventListener('click', function(evt){
+            var switchIcon = document.getElementsByName('switch')[0];
+            var switchIconFile;
+            var showText;
+            if (on) {
+                switchIconFile = './switch-off.svg';
+                showText = 'hidden';
+                on = false;
+                enableMobileCurveMove();
+            } else {
+                switchIconFile = './switch-on.svg';
+                showText = 'visible';
+                on = true;
+                enableScroll();
+            }
+            switchIcon.setAttribute('src', switchIconFile);
+            document.getElementById('welcome').style.visibility = showText;
         }, false);
 
         document.addEventListener('keyup', function(evt) {
@@ -250,6 +269,9 @@ function rescaleIcons(){
     var icons = document.getElementsByName('fractal-svg');
     icons[0].style.height = size + 'px';
     icons[0].style.padding = "0px";
+    var switchIcon = document.getElementsByName('switch');
+    switchIcon[0].style.height = (size / 1.4) + 'px';
+    switchIcon[0].style.padding = "0px";
 }
 
 function rescaleFont() {
@@ -265,17 +287,15 @@ function rescaleFont() {
 }
 
 function hideElement(id){
-    var element = document.getElementById(id);
-    element.style.display = "none";
+    document.getElementById(id).style.display = "hidden";
 }
 
 function showElement(id, displayType){
-    var element = document.getElementById(id);
-    element.style.display = displayType;
+    document.getElementById(id).style.visibility = displayType;
 }
 
 function copyEmail() {  
-    showElement('email-alert-box', "block");
+    showElement('email-alert-box', "visible");
     navigator.clipboard.writeText("contact@trevinsmall.com");
     setTimeout(function(){
         hideElement('email-alert-box');
