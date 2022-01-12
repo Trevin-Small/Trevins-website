@@ -1,11 +1,14 @@
 ### 🙋‍♂️  About me
 ---
-<img src="./readme_about_me.png" alt="About Me" style="background-color:transparent;">
+<img src="../images/readme_about_me.png" alt="About Me" style="background-color:transparent;">
 
 ### 💻  Some of my Work
 ---
 #### - [Mesmerizing Javascript Animations! (Hit Spacebar/Click)](https://trevin-small.github.io/Fractals-JS/)
 #### - [My Latest Personal Project!](https://www.werms-nfts.com/)
+
+| | |
+|:-:|:-:|
 
 ### ⚙️  Technologies/Tools
 ---
@@ -31,4 +34,4 @@
 <br>
 <br>
 
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com) ![(Not a Robot)](./verified-not-a-robot.svg) 
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com) ![(Not a Robot)](../images/verified-not-a-robot.svg) 

@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <title>Trevin Small</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="./stylesheets/stylesheet.css" type="text/css">
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     </head>
     <body class="no-margins" id="background">
         <div class="scroll" id="top-layer">
             <div class="message-box" id="welcome">
-                <img src="header-text-white.svg" id="name-logo" style="background-color:transparent;padding:10px;padding-bottom:25px;position:inherit;width:50vw;">
-                <zero-md src="about-me.md">
+                <img src="./images/header-text-white.svg" id="name-logo" style="background-color:transparent;padding:10px;padding-bottom:25px;position:inherit;width:50vw;">
+                <zero-md src="./markdown/about-me.md">
                     <template>
-                        <link rel="stylesheet" href="markdown.css">
-                        <link rel="stylesheet" href="prism.css">
+                        <link rel="stylesheet" href="./stylesheets/markdown.css">
+                        <link rel="stylesheet" href="./stylesheets/prism.css">
                     </template>
                 </zero-md>
             </div>
@@ -23,7 +23,7 @@
         </div>
         <div class="title-right">
             <div class="switch-box" id="switch-div">
-                <img src="switch-on.svg" name="switch"></i>
+                <img src="./images/switch-on.svg" name="switch"></i>
             </div>
             <div title="LinkedIn" class="icon-box" id="linkedin-icon" onclick="window.open('https://linkedin.com/in/trevin-klint-small');" style="cursor:pointer;">
                 <i class="fa fa-linkedin" name="icon-svg" style="fill:white"></i>
@@ -35,19 +35,19 @@
                 <i class="fa fa-envelope" name="icon-svg" style="font-size:46px;fill:grey"></i>
             </div>
             <div title="Fractals" class="icon-box" id="fractal-icon" onclick="window.location.href='https://trevin-small.github.io/Fractals-JS/';" style="cursor:pointer;">
-                <img src="fractal_white.svg" class="selectDisable" name="fractal-svg" style="stroke:black">
+                <img src="./images/fractal_white.svg" class="selectDisable" name="fractal-svg" style="stroke:black">
             </div>
         </div>
         <div class="email-message" id="email-alert-box" style="display:block;visibility:hidden;">
-            <zero-md src="message.md">
+            <zero-md src="./markdown/message.md">
                 <template>
-                    <link rel="stylesheet" href="markdown.css">
-                    <link rel="stylesheet" href="prism.css">
+                    <link rel="stylesheet" href="./stylesheets/markdown.css">
+                    <link rel="stylesheet" href="./stylesheets/prism.css">
                 </template>
             </zero-md>
         </div>
         <div class="fixed-background" id="fixed-background">
-            <script src="curve_generator.js"></script>
+            <script src="./javascript/curve_generator.js"></script>
         </div>
     </body>
 </html>

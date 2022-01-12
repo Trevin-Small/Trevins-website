@@ -172,12 +172,12 @@ var Curves = (function newCurves() {
             var switchIconFile;
             var showText;
             if (on) {
-                switchIconFile = './switch-off.svg';
+                switchIconFile = './images/switch-off.svg';
                 showText = 'hidden';
                 on = false;
                 enableMobileCurveMove();
             } else {
-                switchIconFile = './switch-on.svg';
+                switchIconFile = './images/switch-on.svg';
                 showText = 'visible';
                 on = true;
                 enableScroll();
