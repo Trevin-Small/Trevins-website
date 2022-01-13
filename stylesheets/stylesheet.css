@@ -90,6 +90,7 @@
     box-shadow: 0px 0px 6px 4px rgb(15, 15, 15);
 }
 .content-container {
+    width: 57vw;
     flex-direction: column;
     justify-content: left;
     align-items: left;
@@ -123,11 +124,13 @@
     pointer-events: none;
 }
 .badge-container {
+    max-width: 50vw;
     flex-direction: row;
     justify-content: center;
     padding-top: 15px;
 }
 .badge {
+    max-width: inherit;
     background-color: transparent;
 }
 .top-level{

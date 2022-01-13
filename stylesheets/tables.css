@@ -15,8 +15,9 @@
     background-color: transparent;
 }
 .cell-container:hover {
-    background-color: darkgray;
-    opacity: 0.75;
+    background-color: white;
+    color: black;
+    opacity: 0.5;
 }
 .cell-icon {
     opacity: 1;
