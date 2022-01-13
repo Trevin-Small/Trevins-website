@@ -153,7 +153,7 @@ var Curves = (function newCurves() {
         window.onresize = function() {
             stopRender();
             resize();
-            rescaleIcons(height);
+            rescaleIcons();
             rescaleFont();
             shapes = generateShapes();
             startRender();
@@ -275,9 +275,6 @@ function rescaleIcons(){
         icons[i].style.fontSize = size + 'px';
         icon_boxes[i].style.padding = "5px 7px 5px 7px";
     }
-    var icons = document.getElementsByName('fractal-svg');
-    icons[0].style.height = size + 'px';
-    icons[0].style.padding = "0px";
     var switchIcon = document.getElementsByName('switch');
     switchIcon[0].style.height = (size / 1.8) + 'px';
     switchIcon[0].style.padding = "0px";

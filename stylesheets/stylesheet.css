@@ -1,3 +1,11 @@
+.backdrop {
+    left: 0px;
+    bottom: 0px;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+    background-color: #160025;
+}
 .title-right {
     display: flex;
     flex-direction: column;
@@ -49,22 +57,6 @@
     background: gray;
     opacity: 0.9;
 }
-.no-margins {
-    left: 0px;
-    bottom: 0px;
-    margin: 0px;
-    overflow: hidden;
-    position: fixed;
-    background-color: #11001c;
-}
-.fixed-background {
-    margin: 0;
-    left: 0px;
-    top: 0px;
-    position: fixed;
-    overflow: hidden;
-    text-align: center;
-}
 .scroll {
     top: 0;
     left: 0;
@@ -74,9 +66,8 @@
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    pointer-events: all;
 }
-.message-box {
+.content-background {
     left: 50vw;
     top: 7vh;
     position: relative;
@@ -88,8 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    text-align: left;
+    text-align: center;
     opacity: 0.9;
     border-radius: 20px;
     background-color: darkslategray;
@@ -97,7 +87,13 @@
     font-family:'Courier New', Courier, monospace;
     font-size: 2.75vmin;
     pointer-events: all;
-    box-shadow: -5px 9px 7px rgb(15, 15, 15);
+    box-shadow: 0px 0px 6px 4px rgb(15, 15, 15);
+}
+.content-container {
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
 }
 .email-message {
     left: 50vw;
@@ -110,7 +106,7 @@
     padding: 20px;
     flex-direction: column;
     justify-content: left;
-    align-items: center;
+    align-items: left;
     text-align: left;
     border-radius: 10px;
     background-color: rgb(153, 74, 74);
@@ -118,7 +114,6 @@
     color: white;
     font-family:'Courier New', Courier, monospace;
     font-size: 2vmin;
-    pointer-events: all;
 }
 .spacer{
     height: 20vh;
@@ -126,6 +121,14 @@
     top: auto;
     position: relative;
     pointer-events: none;
+}
+.badge-container {
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 15px;
+}
+.badge {
+    background-color: transparent;
 }
 .top-level{
     top: 10%;
@@ -144,4 +147,12 @@
 }
 .canvas {
     pointer-events: none;
+}
+.wave-background {
+    margin: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
 }
