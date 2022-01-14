@@ -253,7 +253,7 @@ var colorSchemes = [
     // Background, Table, Side-bar, Highlight
     ['#160025','#4f0147' ,'#4f0147'], // Dark: Purples
     ['#041C32', '#064663', '#ECB365'], // Dark: blue-green and yellow
-    ['#041C32', '#17c3b2', '#227c9d'] // Light: Greens
+    ['#fef9e', '#17c3b2', '#227c9d'] // Light: Greens
 ]
 
 window.onload = function() {
