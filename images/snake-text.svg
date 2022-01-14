@@ -2,8 +2,8 @@
 
  <g> 
   <title>Layer 1</title>
-  <rect stroke="#4c4c4c" rx="14" id="svg_1" height="95" width="195" y="2.5" x="2.5" fill=""/>
-  <text transform="matrix(1 0 0 1 0 0)" stroke="white" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="helvetica" font-size="35" id="svg_2" y="42.71434" x="55.61865" stroke-width="0" fill="white">Snake</text>
-  <text transform="matrix(1 0 0 1 0 0)" style="cursor: move;" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="helvetica" font-size="35" id="svg_3" y="80.42834" x="57.44007" stroke-width="0" stroke="#4c4c4c" fill="white">Game</text>
+  <rect stroke="#4c4c4c" rx="14" id="svg_1" height="95" width="195" y="2.5" x="2.5" fill="#4c4c4c"/>
+  <text transform="matrix(1 0 0 1 0 0)" stroke="white" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="helvetica" font-size="35" id="svg_2" y="42.71434" x="48" stroke-width="0" fill="white">Snake</text>
+  <text transform="matrix(1 0 0 1 0 0)" style="cursor: move;" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="helvetica" font-size="35" id="svg_3" y="80.42834" x="50" stroke-width="0" stroke="#4c4c4c" fill="white">Game</text>
  </g>
 </svg>
