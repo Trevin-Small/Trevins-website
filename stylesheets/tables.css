@@ -4,7 +4,7 @@
     table-layout: fixed;
     border: 5px solid black;
     border-radius: 14px;
-    margin: 15px;
+    margin: 25px;
     padding: 0px;
     background-color: #4f0147;
     font:auto SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
@@ -29,12 +29,13 @@ td {
     justify-content: flex-end;
     align-items: center;
     border: none;
+    border-radius: 10px;
     margin: 0px;
 }
 .cell-container:hover {
-    background-color: white;
+    background-color: #72416d;
     color: black;
-    opacity: 0.5;
+    opacity: 0.95;
 }
 .cell-icon {
     opacity: 1;
