@@ -1,0 +1,90 @@
+.backdrop {
+    left: 0px;
+    bottom: 0px;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+}
+.scroll {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.content-background {
+    left: 50vw;
+    top: 7vh;
+    position: relative;
+    width: 65vw;
+    max-width: 750px;
+    height: auto;
+    transform: translate(-50%, 0);
+    display: flex;
+    padding: 20px 26px 20px 26px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.9;
+    border-radius: 20px;
+    background-color: darkslategray;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 2.75vmin;
+    pointer-events: all;
+    box-shadow: 0px 0px 8px 4px rgb(15, 15, 15);
+}
+.content-container {
+    width: 63vw;
+    max-width: 700px;
+    padding: 15px;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+.spacer{
+    height: 20vh;
+    width: inherit;
+    top: auto;
+    position: relative;
+    pointer-events: none;
+}
+.badge-container {
+    max-width: 63vw;
+    flex-direction: row;
+    justify-content: left;
+    padding-top: 15px;
+}
+.badge {
+    max-width: inherit;
+    background-color: transparent;
+}
+.top-level{
+    top: 10%;
+    left: 0px;
+    width: 100vw;
+    height: 90vh;
+    margin: 0;
+    position: fixed;
+}
+.selectDisable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.inset-container {
+    width: auto;
+    height: auto;
+    padding: 30px;
+    background-color: white;
+    border: 7px solid black;
+    border-radius: 14px;
+}

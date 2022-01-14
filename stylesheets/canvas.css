@@ -1,0 +1,11 @@
+.canvas {
+    pointer-events: none;
+}
+.wave-background {
+    margin: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+}

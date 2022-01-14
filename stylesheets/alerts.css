@@ -1,0 +1,21 @@
+.email-message {
+    left: 50vw;
+    top: 20vh;
+    position: fixed;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, 0);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    border-radius: 10px;
+    background-color: rgb(134, 134, 134);
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px 3px black;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 2vmin;
+}

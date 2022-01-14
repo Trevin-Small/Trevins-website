@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <title>Trevin Small</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./stylesheets/stylesheet.css" type="text/css">
+        <link rel="stylesheet" href="./stylesheets/page-content.css" type="text/css">
         <link rel="stylesheet" href="./stylesheets/tables.css" type="text/css">
+        <link rel="stylesheet" href="./stylesheets/canvas.css" type="text/css">
+        <link rel="stylesheet" href="./stylesheets/alerts.css" type="text/css">
+        <link rel="stylesheet" href="./stylesheets/sidebar.css" type="text/css">
         <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     </head>
     <body class="backdrop" id="background">
@@ -25,45 +28,44 @@
                     </zero-md>
 
                 </div>
-
-                <table class="my-work">
+                <table class="my-work" id="my-work-table">
                     <tr>
                         <td>
                             <div class="cell-container" onclick="window.open('https://trevin-small.github.io/Fractals-JS/');">
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/fractal.svg" style="width: 75%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/fractals-text.svg" style="width:85%;padding:5px;background-color:transparent;fill:transparent;stroke:black;"> 
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/fractal-dark.svg" id="fractal-svg">
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/fractals-text.svg" > 
                             </div>
-                         </td>
+                        </td>
                         <td>
                             <div class="cell-container" onclick="window.open('https://www.werms-nfts.com/');">
-                                <img class="cell-icon" alt="werms. NFT's" src="../images/nft.svg" style="width:75%;padding:5px;background-color:transparent;fill:transparent;stroke:black;"> 
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/nfts-text.svg" style="width:85%;padding:5px;background-color:transparent;fill:transparent;stroke:black;"> 
+                                <img class="cell-icon" alt="werms. NFT's" src="../images/nft.svg" > 
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/nfts-text.svg" > 
                             </div>
                         </td>
                         <td>
                             <div class="cell-container" onclick="window.open('https://github.com/Trevin-Small/Data-Scraper-V2');">
-                                <img class="cell-icon" alt="Driggs Title Website" src="../images/data_entry.svg" style="width:75%;padding:5px;background-color:transparent;fill:transparent;stroke:black;"> 
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/data-entry-text.svg" style="width:85%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">
+                                <img class="cell-icon" alt="Driggs Title Website" src="../images/data_entry.svg" > 
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/data-entry-text.svg" >
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <div class="cell-container" onclick="window.open('https://github.com/Trevin-Small/Python-Physics-Engine');"">
-                                <img class="cell-icon" alt="Physics Engine" src="../images/physics.svg" style="width: 75%;padding:5px;background-color:transparent;fill:transparent;stroke:black;"> 
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/physics-text.svg" style="width:85%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">
+                                <img class="cell-icon" alt="Physics Engine" src="../images/physics.svg"> 
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/physics-text.svg" >
                             </div>
                         </td>
                         <td>
                             <div class="cell-container" onclick="window.open('https://trevin-small.github.io/snake-js/');">
-                                <img class="cell-icon" alt="Snake" src="../images/snake.svg" style="width: 75%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">     
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/snake-text.svg" style="width:85%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">
+                                <img class="cell-icon" alt="Snake" src="../images/snake.svg">     
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/snake-text.svg" >
                             </div>
                         </td>
                         <td>
                             <div class="cell-container" onclick="window.open('https://www.instructables.com/Arduino-Powered-Lightsaber/');">
-                                <img class="cell-icon" alt="Lightsaber" src="../images/lightsaber.svg" style="width: 75%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/lightsaber-text.svg" style="width:85%;padding:5px;background-color:transparent;fill:transparent;stroke:black;">
+                                <img class="cell-icon" alt="Lightsaber" src="../images/lightsaber.svg">
+                                <img class="cell-icon" alt="Fractals-JS" src="../images/lightsaber-text.svg" >
                             </div>
                         </td>
                     </tr>
@@ -102,7 +104,7 @@
 
         </div>
 
-        <div class="title-right">
+        <div class="title-right" id="side-bar">
 
             <div class="switch-box" id="switch-div">
                 <img src="./images/switch-on.svg" name="switch"></i>

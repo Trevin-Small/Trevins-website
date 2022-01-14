@@ -1,24 +1,12 @@
 .my-work {
-    width: 58vw;
-    max-width: 450px;
+    width: 60vw;
+    max-width: 500px;
     table-layout: fixed;
     border: 5px solid black;
     border-radius: 14px;
-    margin: 25px;
-    padding: 0px;
-    background-color: #4f0147;
     font:auto SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
 }
 table {
-    height: 100%;
-    margin: 0px;
-}
-tr {
-    height: 100%;
-    margin: 0px;
-}
-td {
-    height: 100%;
     margin: 0px;
 }
 .cell-container{
@@ -29,19 +17,20 @@ td {
     justify-content: flex-end;
     align-items: center;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 0px;
 }
 .cell-container:hover {
-    background-color: #72416d;
+    background-color: rgb(90, 105, 105);
     color: black;
-    opacity: 0.95;
+    opacity: 0.9;
 }
 .cell-icon {
-    opacity: 1;
-    padding-top: 10px;
-    height: auto;
-    width: auto;
+    width: 75%;
+    padding:5px;
+    background-color:transparent;
+    fill:transparent;
+    stroke:black;
 }
 .cell-text {
     position: relative;
@@ -52,7 +41,6 @@ td {
     margin: 2px;
     padding: 0px;
     opacity: 1;
-    background-color: darkslategray;
     border-radius: 8px;
     z-index: 500;
     display: table;

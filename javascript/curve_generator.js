@@ -249,10 +249,18 @@ var Curves = (function newCurves() {
 
 })();
 
+var colorSchemes = [
+    // Background, Table, Side-bar, Highlight
+    ['#160025','#4f0147' ,'#4f0147'], // Dark: Purples
+    ['#041C32', '#064663', '#ECB365'], // Dark: blue-green and yellow
+    ['#fef9ef', '#17c3b2', '#227c9d'] // Light: Greens
+]
+
 window.onload = function() {
     Curves.init(document.body);
     rescaleFont();
     rescaleIcons();
+    setColorScheme(Math.floor(Math.random() * colorSchemes.length));
 }
 
 function hideElement(id){
@@ -306,4 +314,21 @@ function copyEmail() {
     setTimeout(function(){
         hideElement('email-alert-box');
     }, 1500);
+}
+
+function setColorScheme(number) {
+    document.getElementById('background').style.backgroundColor = colorSchemes[number][0];
+    document.getElementById('my-work-table').style.backgroundColor = colorSchemes[number][1];
+    document.getElementById('side-bar').style.backgroundColor = colorSchemes[number][2];
+    // Highlight color has to be changed manually :|
+
+    var file = '';
+    if (number == 0) {
+        file = 'fractal-dark.svg';
+    } else if (number == 1) {
+        file = 'fractal-green.svg';
+    } else if (number = 2) {
+        file = 'fractal-light.svg';
+    }
+    document.getElementById('fractal-svg').src = './images/' + file;
 }
