@@ -64,7 +64,7 @@ var Curves = (function newCurves() {
             var distanceToMouse = 0;
             var changeY = 0;
             point.y = point.oldY + Math.sin(point.angle) * CURVE_INTENSITY;
-            if (!isNaN(mouseY) && mouseY < point.y){
+            if (!isNaN(mouseY)){
                 var distanceY = Math.floor(Math.abs(point.y - mouseY));
                 var distanceX = Math.floor(Math.abs(point.x - mouseX));
                 distanceToMouse = Math.pow(Math.pow(distanceX, 2) + Math.pow(distanceY, 2), 0.5);
@@ -253,14 +253,16 @@ var colorSchemes = [
     // Background, Table, Side-bar, Highlight
     ['#160025','#4f0147' ,'#4f0147'], // Dark: Purples
     ['#041C32', '#064663', '#ECB365'], // Dark: blue-green and yellow
-    ['#fef9ef', '#17c3b2', '#227c9d'] // Light: Greens
+    ['#041C32', '#17c3b2', '#227c9d'] // Light: Greens
 ]
 
 window.onload = function() {
     Curves.init(document.body);
     rescaleFont();
     rescaleIcons();
-    setColorScheme(Math.floor(Math.random() * colorSchemes.length));
+    //var colorSchemeNum = Math.floor(Math.random() * colorSchemes.length);
+    //setColorScheme(colorSchemeNum); // Uncomment for randomized color schemes
+    setColorScheme(2);
 }
 
 function hideElement(id){
