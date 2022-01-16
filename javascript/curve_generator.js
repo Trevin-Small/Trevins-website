@@ -64,7 +64,7 @@ var Curves = (function newCurves() {
             var distanceToMouse = 0;
             var changeY = 0;
             point.y = point.oldY + Math.sin(point.angle) * CURVE_INTENSITY;
-            if (!isNaN(mouseY)){
+            if (!isNaN(mouseY) && mouseY < point.y){
                 var distanceY = Math.floor(Math.abs(point.y - mouseY));
                 var distanceX = Math.floor(Math.abs(point.x - mouseX));
                 distanceToMouse = Math.pow(Math.pow(distanceX, 2) + Math.pow(distanceY, 2), 0.5);
