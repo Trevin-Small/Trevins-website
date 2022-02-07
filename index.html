@@ -1,132 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0;">
-        <title>Trevin Small</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="./stylesheets/page-content.css" type="text/css">
-        <link rel="stylesheet" href="./stylesheets/tables.css" type="text/css">
-        <link rel="stylesheet" href="./stylesheets/canvas.css" type="text/css">
-        <link rel="stylesheet" href="./stylesheets/alerts.css" type="text/css">
-        <link rel="stylesheet" href="./stylesheets/sidebar.css" type="text/css">
-        <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
-    </head>
-    <body class="backdrop" id="background">
-        <div class="scroll" id="top-layer">
-            <div class="content-background" id="welcome">
-                
-                <img src="./images/header-text-white.svg" id="name-logo" style="background-color:transparent;padding:10px;padding-bottom:25px;position:inherit;width:59vw;max-width:700px;">
-                
-                <div class="content-container">
 
-                    <zero-md src="./markdown/about-me-top.md">
-                        <template>
-                            <link rel="stylesheet" href="./stylesheets/markdown.css">
-                            <link rel="stylesheet" href="./stylesheets/prism.css">
-                        </template>
-                    </zero-md>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <title>Trevin Small</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./stylesheets/page-content.css" type="text/css">
+    <link rel="stylesheet" href="./stylesheets/tables.css" type="text/css">
+    <link rel="stylesheet" href="./stylesheets/canvas.css" type="text/css">
+    <link rel="stylesheet" href="./stylesheets/alerts.css" type="text/css">
+    <link rel="stylesheet" href="./stylesheets/sidebar.css" type="text/css">
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+</head>
 
+<body class="backdrop" id="background">
+    <div class="scroll" id="top-layer">
+        <div class="content-background" id="welcome">
+
+            <img src="./images/header-text-white.svg" id="name-logo"
+                style="background-color:transparent;padding:10px;padding-bottom:25px;position:inherit;width:59vw;max-width:700px;">
+
+            <div class="content-container">
+
+                <zero-md src="./markdown/about-me-top.md">
+                    <template>
+                        <link rel="stylesheet" href="./stylesheets/markdown.css">
+                        <link rel="stylesheet" href="./stylesheets/prism.css">
+                    </template>
+                </zero-md>
+
+            </div>
+            <table class="my-work" id="my-work-table">
+                <tr>
+                    <td>
+                        <div class="cell-container" onclick="window.open('https://communitycrag.com');">
+                            <img class="cell-icon" alt="Community Crag" src="./images/ccrag.svg" id="fractal-svg">
+                            <img class="cell-icon" alt="Community Crag" src="./images/ccrag-text.svg">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container"
+                            onclick="window.open('https://trevin-small.github.io/Fractals-JS/');">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/fractal-green.svg" id="fractal-svg">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/fractals-text.svg">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container" onclick="window.open('https://www.werms-nfts.com/');">
+                            <img class="cell-icon" alt="werms. NFT's" src="./images/nft.svg">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/nfts-text.svg">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cell-container"
+                            onclick="window.open('https://github.com/Trevin-Small/Python-Physics-Engine');"">
+                                <img class=" cell-icon" alt="Physics Engine" src="./images/physics.svg">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/physics-text.svg">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container"
+                            onclick="window.open('https://github.com/Trevin-Small/Data-Scraper-V2');">
+                            <img class="cell-icon" alt="Driggs Title Website" src="./images/data_entry.svg">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/data-entry-text.svg">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cell-container"
+                            onclick="window.open('https://www.instructables.com/Arduino-Powered-Lightsaber/');">
+                            <img class="cell-icon" alt="Lightsaber" src="./images/lightsaber.svg">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/lightsaber-text.svg">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cell-container" onclick="window.open('https://trevin-small.github.io/snake-js/');">
+                            <img class="cell-icon" alt="Snake" src="./images/snake.svg">
+                            <img class="cell-icon" alt="Fractals-JS" src="./images/snake-text.svg">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="content-container">
+
+                <zero-md src="./markdown/about-me-bottom.md">
+                    <template>
+                        <link rel="stylesheet" href="./stylesheets/markdown.css">
+                        <link rel="stylesheet" href="./stylesheets/prism.css">
+                    </template>
+                </zero-md>
+
+                <div class="badge-container">
+                    <img class="badge"
+                        src="https://github-readme-stats.vercel.app/api?username=Trevin-Small&count_private=true&show_icons=true&theme=cobalt">
                 </div>
-                <table class="my-work" id="my-work-table">
-                    <tr>
-                        <td>
-                            <div class="cell-container" onclick="window.open('https://trevin-small.github.io/Fractals-JS/');">
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/fractal-dark.svg" id="fractal-svg">
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/fractals-text.svg" > 
-                            </div>
-                        </td>
-                        <td>
-                            <div class="cell-container" onclick="window.open('https://www.werms-nfts.com/');">
-                                <img class="cell-icon" alt="werms. NFT's" src="../images/nft.svg" > 
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/nfts-text.svg" > 
-                            </div>
-                        </td>
-                        <td>
-                            <div class="cell-container" onclick="window.open('https://github.com/Trevin-Small/Data-Scraper-V2');">
-                                <img class="cell-icon" alt="Driggs Title Website" src="../images/data_entry.svg" > 
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/data-entry-text.svg" >
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="cell-container" onclick="window.open('https://github.com/Trevin-Small/Python-Physics-Engine');"">
-                                <img class="cell-icon" alt="Physics Engine" src="../images/physics.svg"> 
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/physics-text.svg" >
-                            </div>
-                        </td>
-                        <td>
-                            <div class="cell-container" onclick="window.open('https://trevin-small.github.io/snake-js/');">
-                                <img class="cell-icon" alt="Snake" src="../images/snake.svg">     
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/snake-text.svg" >
-                            </div>
-                        </td>
-                        <td>
-                            <div class="cell-container" onclick="window.open('https://www.instructables.com/Arduino-Powered-Lightsaber/');">
-                                <img class="cell-icon" alt="Lightsaber" src="../images/lightsaber.svg">
-                                <img class="cell-icon" alt="Fractals-JS" src="../images/lightsaber-text.svg" >
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-
-                <div class="content-container">
-
-                    <zero-md src="./markdown/about-me-bottom.md">
-                        <template>
-                            <link rel="stylesheet" href="./stylesheets/markdown.css">
-                            <link rel="stylesheet" href="./stylesheets/prism.css">
-                        </template>
-                    </zero-md>
-                    
-                    <div class="badge-container">
-                        <img class="badge" src="https://github-readme-stats.vercel.app/api?username=Trevin-Small&count_private=true&show_icons=true&theme=cobalt">
-                    </div>
-                    <div class="badge-container">
-                        <img class="badge" alt="forthebadge" src="https://forthebadge.com/images/badges/powered-by-coffee.svg">
-                        <img class="badge" alt="forthebadge" src="../images/verified-not-a-robot.svg">
-                    </div>
-
+                <div class="badge-container">
+                    <img class="badge" alt="forthebadge"
+                        src="https://forthebadge.com/images/badges/powered-by-coffee.svg">
+                    <img class="badge" alt="forthebadge" src="../images/verified-not-a-robot.svg">
                 </div>
+
             </div>
-            <div class="spacer"></div>
+        </div>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="email-message" id="email-alert-box" style="display:block;visibility:hidden;">
+
+        <zero-md src="./markdown/message.md">
+            <template>
+                <link rel="stylesheet" href="./stylesheets/markdown.css">
+                <link rel="stylesheet" href="./stylesheets/prism.css">
+            </template>
+        </zero-md>
+
+    </div>
+
+    <div class="title-right" id="side-bar">
+
+        <div class="switch-box" id="switch-div">
+            <img src="./images/switch-on.svg" name="switch"></i>
         </div>
 
-        <div class="email-message" id="email-alert-box" style="display:block;visibility:hidden;">
-
-            <zero-md src="./markdown/message.md">
-                <template>
-                    <link rel="stylesheet" href="./stylesheets/markdown.css">
-                    <link rel="stylesheet" href="./stylesheets/prism.css">
-                </template>
-            </zero-md>
-
+        <div title="LinkedIn" class="icon-box" id="linkedin-icon"
+            onclick="window.open('https://linkedin.com/in/trevin-klint-small');" style="cursor:pointer;">
+            <i class="fa fa-linkedin" name="icon-svg" style="fill:white"></i>
         </div>
 
-        <div class="title-right" id="side-bar">
-
-            <div class="switch-box" id="switch-div">
-                <img src="./images/switch-on.svg" name="switch"></i>
-            </div>
-
-            <div title="LinkedIn" class="icon-box" id="linkedin-icon" onclick="window.open('https://linkedin.com/in/trevin-klint-small');" style="cursor:pointer;">
-                <i class="fa fa-linkedin" name="icon-svg" style="fill:white"></i>
-            </div>
-
-            <div title="GitHub" class="icon-box" id="github-icon" onclick="window.open('https://github.com/Trevin-Small');" style="cursor:pointer;">
-                <i class="fa fa-github" name="icon-svg" style="fill:white"></i>
-            </div>
-
-            <div title="Copy email to clipboard" class="icon-box" id="email-icon" onclick="copyEmail()" style="cursor:pointer;">
-                <i class="fa fa-envelope" name="icon-svg" style="font-size:46px;fill:grey"></i>
-            </div>
-
+        <div title="GitHub" class="icon-box" id="github-icon" onclick="window.open('https://github.com/Trevin-Small');"
+            style="cursor:pointer;">
+            <i class="fa fa-github" name="icon-svg" style="fill:white"></i>
         </div>
 
-        <div class="wave-background" id="fixed-background">
-            <script src="./javascript/curve_generator.js"></script>
+        <div title="Copy email to clipboard" class="icon-box" id="email-icon" onclick="copyEmail()"
+            style="cursor:pointer;">
+            <i class="fa fa-envelope" name="icon-svg" style="font-size:46px;fill:grey"></i>
         </div>
 
-    </body>
+    </div>
+
+    <div class="wave-background" id="fixed-background">
+        <script src="./javascript/curve_generator.js"></script>
+    </div>
+
+</body>
+
 </html>
