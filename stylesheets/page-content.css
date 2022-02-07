@@ -20,7 +20,7 @@
     top: 25px;
     position: relative;
     width: 73vw;
-    max-width: calc(73vw - (50px * 2));
+    max-width: 850px;
     height: auto;
     transform: translate(-50%, 0);
     display: flex;
@@ -40,7 +40,7 @@
 }
 .content-container {
     width: 71vw;
-    max-width: calc(71vw - (50px * 2));
+    max-width: 800;
     padding: 15px;
     margin: 5px;
     flex-direction: column;
