@@ -1,22 +1,21 @@
 .my-work {
-    width: 60vw;
-    max-width: 500px;
-    table-layout: fixed;
+    width: 85%;
+    height: auto;
+    display: grid;
     border: 5px solid black;
     border-radius: 14px;
-    font:auto SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-}
-table {
-    margin: 0px;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 33%));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 33%));
+    padding: 5px;
 }
 .cell-container{
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     background-color: transparent;
+    display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    border: none;
     border-radius: 8px;
     margin: 0px;
 }
@@ -27,6 +26,7 @@ table {
 }
 .cell-icon {
     width: 75%;
+    max-width: 6rem;
     padding:5px;
     background-color:transparent;
     fill:transparent;
