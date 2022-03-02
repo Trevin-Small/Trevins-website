@@ -4,8 +4,8 @@
     display: grid;
     border: 5px solid black;
     border-radius: 14px;
-    grid-template-columns: repeat(auto-fill, minmax(7rem, 33%));
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 33%));
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 9rem));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 9rem));
     padding: 5px;
 }
 .cell-container{
@@ -26,7 +26,7 @@
 }
 .cell-icon {
     width: 75%;
-    max-width: 6rem;
+    max-width: 8rem;
     padding:5px;
     background-color:transparent;
     fill:transparent;
