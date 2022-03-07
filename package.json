@@ -1,0 +1,28 @@
+{
+  "name": "trevins-website",
+  "version": "1.0.0",
+  "description": "![screenshot of my website](https://github.com/Trevin-Small/Trevins-website/blob/main/images/website_image.png?raw=true)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trevin-Small/Trevins-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trevin-Small/Trevins-website/issues"
+  },
+  "homepage": "https://github.com/Trevin-Small/Trevins-website#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
