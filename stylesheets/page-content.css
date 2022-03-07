@@ -5,6 +5,17 @@
     overflow: hidden;
     position: fixed;
 }
+.canvas {
+    pointer-events: none;
+}
+.wave-background {
+    margin: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+}
 .scroll {
     top: 0;
     left: 0;
@@ -87,4 +98,131 @@
     background-color: white;
     border: 7px solid black;
     border-radius: 14px;
+}
+
+.my-work {
+    width: 85%;
+    height: auto;
+    display: grid;
+    border: 5px solid black;
+    border-radius: 14px;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 9rem));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 9rem));
+    padding: 5px;
+}
+.cell-container{
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 8px;
+    margin: 0px;
+}
+.cell-container:hover {
+    background-color: rgb(90, 105, 105);
+    color: black;
+    opacity: 0.9;
+}
+.cell-icon {
+    width: 75%;
+    max-width: 8rem;
+    padding:5px;
+    background-color:transparent;
+    fill:transparent;
+    stroke:black;
+}
+.cell-text {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 98%;
+    height: 28%;
+    margin: 2px;
+    padding: 0px;
+    opacity: 1;
+    border-radius: 8px;
+    z-index: 500;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+}
+.cell-text b {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1vw;
+}
+
+.title-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+    height: auto;
+    width: 11vw;
+    max-width: 50px;
+    top: 10vh;
+    right: 0.5vw;
+    border-radius: 14px;
+    padding: 5px 5px 5px 5px;
+}
+.switch-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 3px;
+    margin: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    fill: gray;
+    color:white;
+    opacity: 0.9;
+    cursor: pointer;
+}
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 4px 5px 4px 5px;
+    margin: 2px;
+    border-radius: 10px;
+    font-size: 20px;
+    fill: gray;
+    color:white;
+    opacity: 0.9;
+}
+.icon-box:hover {
+    background: gray;
+    opacity: 0.9;
+}
+.email-message {
+    left: 50vw;
+    top: 20vh;
+    position: fixed;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, 0);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    border-radius: 10px;
+    background-color: rgb(134, 134, 134);
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px 1px black;
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 2vmin;
 }
