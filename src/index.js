@@ -257,7 +257,7 @@ let colorSchemes = [
 ]
 
 window.onload = function() {
-    Curves.init(document.body);
+    Waves.init(document.body);
     rescaleFont();
     rescaleIcons();
     //let colorSchemeNum = Math.floor(Math.random() * colorSchemes.length);
