@@ -1,19 +1,19 @@
-var Curves = (function newCurves() {
+const Waves = (function createWaves() {
     'use strict';
-    var raf_ID = 0;
-    var CURVE_INTENSITY = 40;
-    var SPEED_FACTOR = Math.random() * 0.015 + 0.01;
-    var NUM_OF_CURVES = Math.round(Math.random() * 2 + 3);
-    var NUM_MIN_MAX = Math.random() * 15 + 10;
-    var DISTANCE_EXPONENT = 1.15;
-    var MAX_MOUSE_MOTION = 150;
-    var MOUSE_COEFFICIENT = 0.825;
+    let raf_ID = 0;
+    let CURVE_INTENSITY = 40;
+    let SPEED_FACTOR = Math.random() * 0.015 + 0.01;
+    let NUM_OF_CURVES = Math.round(Math.random() * 2 + 3);
+    let NUM_MIN_MAX = Math.random() * 15 + 10;
+    let DISTANCE_EXPONENT = 1.15;
+    let MAX_MOUSE_MOTION = 150;
+    let MOUSE_COEFFICIENT = 0.825;
 
-    var colorScheme = Math.floor(Math.random() * 10) + 1;
-    var mouseX = 0; 
-    var mouseY = 0;
-    var siteTheme = 1;
-    var siteColorThemes = {
+    let colorScheme = Math.floor(Math.random() * 10) + 1;
+    let mouseX = 0;
+    let mouseY = 0;
+    let siteTheme = 1;
+    let siteColorThemes = {
         1: ["#4f0147", "#290025", "#11001c", "#ffffff"],
         2: ["#ece071", "#454545", "#dbdbdb", "#000000"]
     };
@@ -23,7 +23,7 @@ var Curves = (function newCurves() {
         if (siteTheme > 2){
             siteTheme = 1;
         }
-        document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2]; 
+        document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2];
     }
 
     function newWaves(){
@@ -40,7 +40,7 @@ var Curves = (function newCurves() {
     }
 
     function getMousePos(evt) {
-        var rect = canvas.getBoundingClientRect();
+        let rect = canvas.getBoundingClientRect();
         mouseX = evt.clientX - rect.left;
         mouseY = evt.clientY - rect.top;
       }
@@ -49,9 +49,9 @@ var Curves = (function newCurves() {
         this.points = points;
         this.color = color;
     }
-    
+
     Shape.prototype.render = function(ctx, width, height) {
-        var self = this;
+        let self = this;
         ctx.save();
         ctx.lineWidth = 2;
         ctx.strokeStyle = '#fff';
@@ -61,35 +61,35 @@ var Curves = (function newCurves() {
         ctx.beginPath();
         ctx.moveTo(this.points[0].x, this.points[0].y);
         this.points.forEach(function(point, i) {
-            var distanceToMouse = 0;
-            var changeY = 0;
+            let distanceToMouse = 0;
+            let changeY = 0;
             point.y = point.oldY + Math.sin(point.angle) * CURVE_INTENSITY;
             if (!isNaN(mouseY) && mouseY < point.y){
-                var distanceY = Math.floor(Math.abs(point.y - mouseY));
-                var distanceX = Math.floor(Math.abs(point.x - mouseX));
+                let distanceY = Math.floor(Math.abs(point.y - mouseY));
+                let distanceX = Math.floor(Math.abs(point.x - mouseX));
                 distanceToMouse = Math.pow(Math.pow(distanceX, 2) + Math.pow(distanceY, 2), 0.5);
                 changeY = distanceY * (MAX_MOUSE_MOTION / Math.pow(distanceToMouse, DISTANCE_EXPONENT)) * MOUSE_COEFFICIENT;
                 point.y -= changeY;
             }
 
             point.angle += point.speed;
-            var nextPoint = self.points[i + 1];
+            let nextPoint = self.points[i + 1];
             if (nextPoint) {
-                var ctrlPoint = {
+                let ctrlPoint = {
                     x: (point.x + nextPoint.x) / 2,
                     y: (point.y + nextPoint.y) / 2
-                }; 
+                };
                 ctx.quadraticCurveTo(point.x, point.y, ctrlPoint.x, ctrlPoint.y);
             }
         });
         ctx.lineTo(width, height);
         ctx.lineTo(0, height);
         ctx.fill();
-        
+
         ctx.restore();
     };
-        
-    var colors = {
+
+    let colors = {
         1: ['#e63946', '#f1faee', '#a8dadc', '#457b9d', '#1d3557', '#6c757d'],
         2: ['#ef476f', '#ffd166', '#06d6a0', '#118ab2', '#073b4c', '#6c757d'],
         3: ['#e76f51', '#f4a261', '#e9c46a', '#2a9d8f', '#264653', '#6c757d'],
@@ -101,31 +101,31 @@ var Curves = (function newCurves() {
         9: ['#a2d2ff', '#bde0fe', '#ffafcc', '#ffc8dd', '#cdb4db', '#6c757d'],
         10: ['#ff9b54', '#ff7f51', '#ce4257', '#720026', '#4f000b', '#6c757d']
     };
-    
-    var canvas = document.createElement('canvas');
-    var topLayer = document.getElementById('top-layer');
-    var ctx = canvas.getContext('2d');
-    var width = window.innerWidth;
-    var height = window.innerHeight;
-    var shapes = generateShapes();
+
+    let canvas = document.createElement('canvas');
+    let topLayer = document.getElementById('top-layer');
+    let ctx = canvas.getContext('2d');
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    let shapes = generateShapes();
 
     function generateShapes(num, spacing) {
-        var shapes = [];
-        var yCenter = window.innerHeight / 2;
-        for (var i = 0; i < NUM_OF_CURVES; i += 1) {
-            var points = [];
-            var offset = 0;
-            for (var x = 0; x <= width + (width / 4); x += width / NUM_MIN_MAX) {
-                var angle = Math.random() * 360;
+        let shapes = [];
+        let yCenter = window.innerHeight / 2;
+        for (let i = 0; i < NUM_OF_CURVES; i += 1) {
+            let points = [];
+            let offset = 0;
+            for (let x = 0; x <= width + (width / 4); x += width / NUM_MIN_MAX) {
+                let angle = Math.random() * 360;
                 if (i === 0) offset = Math.random() * 200 + 210;
-                if (i === 1) offset = Math.random() * 160 + 180;                
-                if (i === 2) offset = Math.random() * 130 + 150;                
+                if (i === 1) offset = Math.random() * 160 + 180;
+                if (i === 2) offset = Math.random() * 130 + 150;
                 if (i === 3) offset = Math.random() * 100 + 120;
-                if (i === 4) offset = Math.random() * 80 + 90;                
+                if (i === 4) offset = Math.random() * 80 + 90;
                 if (i === 5) offset = Math.random() * 60 + 60;
                 offset -= x / 20;
-                var point = { 
-                    x: x, 
+                let point = {
+                    x: x,
                     y: yCenter + offset,
                     oldY: yCenter + offset,
                     angle: angle,
@@ -133,7 +133,7 @@ var Curves = (function newCurves() {
                 };
                 points.push(point);
             }
-            var shape = new Shape(points, colors[colorScheme][i]);
+            let shape = new Shape(points, colors[colorScheme][i]);
             shapes.push(shape);
         }
         return shapes;
@@ -144,7 +144,7 @@ var Curves = (function newCurves() {
         parent.appendChild(canvas);
         canvas.setAttribute("class", "canvas");
         ctx.fillStyle = '#111';
-        var on = true;
+        let on = true;
 
         if (width < height) {
             NUM_MIN_MAX = Math.random() * 10 + 8;
@@ -157,20 +157,20 @@ var Curves = (function newCurves() {
             rescaleFont();
             shapes = generateShapes();
             startRender();
-        }; 
+        };
 
         topLayer.addEventListener('click', function(evt) {
             newWaves();
         }, false);
 
-        topLayer.addEventListener('mousemove', function(evt) { 
+        topLayer.addEventListener('mousemove', function(evt) {
             getMousePos(evt);
         }, false);
 
         document.getElementById('switch-div').addEventListener('click', function(evt){
-            var switchIcon = document.getElementsByName('switch')[0];
-            var switchIconFile;
-            var showText;
+            let switchIcon = document.getElementsByName('switch')[0];
+            let switchIconFile;
+            let showText;
             if (on) {
                 switchIconFile = './images/switch-off.svg';
                 showText = 'hidden';
@@ -202,14 +202,14 @@ var Curves = (function newCurves() {
         startRender();
     }
 
-    function render() { // Recrusive Animation loop 
+    function render() { // Recrusive Animation loop
         raf_ID = window.requestAnimationFrame(render);
         ctx.clearRect(0, 0, width, height);
         shapes.slice().reverse().forEach(function(shape) {
             shape.render(ctx, width, height);
         });
     }
-    
+
     function startRender() {
         render();
     }
@@ -217,7 +217,7 @@ var Curves = (function newCurves() {
     function stopRender() {
         window.cancelAnimationFrame(raf_ID);
     }
-    
+
     function resize() {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
@@ -243,13 +243,13 @@ var Curves = (function newCurves() {
 
     return {
         init: init,
-        startRender: startRender, 
+        startRender: startRender,
         stopRender: stopRender
     };
 
 })();
 
-var colorSchemes = [
+let colorSchemes = [
     // Background, Table, Side-bar, Highlight
     ['#160025','#4f0147' ,'#4f0147'], // Dark: Purples
     ['#041C32', '#064663', '#ECB365'], // Dark: blue-green and yellow
@@ -260,40 +260,40 @@ window.onload = function() {
     Curves.init(document.body);
     rescaleFont();
     rescaleIcons();
-    //var colorSchemeNum = Math.floor(Math.random() * colorSchemes.length);
+    //let colorSchemeNum = Math.floor(Math.random() * colorSchemes.length);
     //setColorScheme(colorSchemeNum); // Uncomment for randomized color schemes
     setColorScheme(2);
 }
 
 function hideElement(id){
-    var element = document.getElementById(id);
+    let element = document.getElementById(id);
     element.style.display = "none";
 }
 
 function showElement(id, displayType){
-    var element = document.getElementById(id);
+    let element = document.getElementById(id);
     element.style.display = displayType;
 }
 
 function rescaleIcons(){
-    var icons = document.getElementsByName('icon-svg');
-    var icon_boxes = document.getElementsByClassName("icon-box");
-    var maxSize = 35;
-    var widthBasedSize = Math.floor(window.innerWidth * 0.11 - 12);
-    var size = widthBasedSize > maxSize ? maxSize : widthBasedSize;
-    for (var i = 0; i < icons.length; i++){
+    let icons = document.getElementsByName('icon-svg');
+    let icon_boxes = document.getElementsByClassName("icon-box");
+    let maxSize = 35;
+    let widthBasedSize = Math.floor(window.innerWidth * 0.11 - 12);
+    let size = widthBasedSize > maxSize ? maxSize : widthBasedSize;
+    for (let i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
         icon_boxes[i].style.padding = "6px";
     }
-    var switchIcon = document.getElementsByName('switch');
+    let switchIcon = document.getElementsByName('switch');
     switchIcon[0].style.height = (size / 1.8) + 'px';
     switchIcon[0].style.padding = "0px";
 }
 
 function rescaleFont() {
-    var messageBoxes = document.getElementsByClassName("message-box");
-    for (var i = 0; i < messageBoxes.length; i++) {
-        var smallerDimension = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+    let messageBoxes = document.getElementsByClassName("message-box");
+    for (let i = 0; i < messageBoxes.length; i++) {
+        let smallerDimension = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
         if (smallerDimension < 1100) {
             messageBoxes[i].style.fontSize = smallerDimension * 0.035;
         } else {
@@ -310,7 +310,7 @@ function showElement(id, displayType){
     document.getElementById(id).style.visibility = displayType;
 }
 
-function copyEmail() {  
+function copyEmail() {
     showElement('email-alert-box', "visible");
     navigator.clipboard.writeText("contact@trevinsmall.com");
     setTimeout(function(){
@@ -324,7 +324,7 @@ function setColorScheme(number) {
     document.getElementById('side-bar').style.backgroundColor = colorSchemes[number][2];
     // Highlight color has to be changed manually :|
 
-    var file = '';
+    let file = '';
     if (number == 0) {
         file = 'fractal-dark.svg';
     } else if (number == 1) {
