@@ -310,14 +310,6 @@ function showElement(id, displayType){
     document.getElementById(id).style.visibility = displayType;
 }
 
-function copyEmail() {
-    showElement('email-alert-box', "visible");
-    navigator.clipboard.writeText("contact@trevinsmall.com");
-    setTimeout(function(){
-        hideElement('email-alert-box');
-    }, 1500);
-}
-
 function setColorScheme(number) {
     document.getElementById('background').style.backgroundColor = colorSchemes[number][0];
     document.getElementById('my-work-table').style.backgroundColor = colorSchemes[number][1];
