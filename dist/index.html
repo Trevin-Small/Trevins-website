@@ -32,7 +32,6 @@
                 <div class="w-40 mr-1 px-3 pt-1 pb-4 rounded-t-lg relative top-4" name="tab" id="0">About Me</div>
                 <div class="w-40 mr-1 px-3 pt-1 pb-4 rounded-t-lg relative top-4" name="tab" id="1">My Work</div>
                 <div class="w-40 mr-1 px-3 pt-1 pb-4 rounded-t-lg relative top-4" name="tab" id="2">Resume</div>
-
             </div>
 
             <div class="w-full h-full m-0 p-4 bg-gray-600 rounded-2xl flex flex-col items-center">
@@ -61,14 +60,16 @@
                     </div>
                 </div>
 
-                <div class="w-full h-full m-0 p-0 items-start" style="display:none" id="page-my-work">
+                <div class="w-full h-full m-0 p-0" style="display:none" id="page-my-work">
 
-                    <zero-md src="./markdown/my-work.md">
-                        <template>
-                            <link rel="stylesheet" href="./stylesheets/markdown.css">
-                            <link rel="stylesheet" href="./stylesheets/prism.css">
-                        </template>
-                    </zero-md>
+                    <div class="content-container">
+                        <zero-md src="./markdown/my-work.md">
+                            <template>
+                                <link rel="stylesheet" href="./stylesheets/markdown.css">
+                                <link rel="stylesheet" href="./stylesheets/prism.css">
+                            </template>
+                        </zero-md>
+                    </div>
 
                     <div class="w-full h-auto my-4 flex flex-col items-center">
 
@@ -115,8 +116,14 @@
                 </div>
 
                 <div class="w-full h-full m-0 p-0" style="display:none" id="page-resume">
+                    <div class="w-full h-full rounded-lg" style="overflow:hidden;">
+                        <img src="./images/resume.png" class="w-full h-full">
+                    </div>
+                </div>
 
-                    <zero-md src="./markdown/resume.md">
+                <div class="w-full h-full m-0 p-0" style="display:none;" id="page-fun-stuff">
+
+                    <zero-md src="./markdown/fun-stuff.md">
                         <template>
                             <link rel="stylesheet" href="./stylesheets/markdown.css">
                             <link rel="stylesheet" href="./stylesheets/prism.css">

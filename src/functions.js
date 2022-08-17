@@ -10,12 +10,13 @@ export const Functions = (() => {
   const PAGES = [
     "page-about-me",
     "page-my-work",
-    "page-resume"
+    "page-resume",
+    "page-fun-stuff"
   ]
 
   const ACTIVE_GRAY = "#4b5563";
   const INACTIVE_GRAY = "#1f2937";
-
+  const maxIconSize = 40;
   const tabs = document.getElementsByName('tab');
 
   let currentTabNum = 0;
@@ -23,9 +24,8 @@ export const Functions = (() => {
   function rescaleIcons(){
     let icons = document.getElementsByName('icon-svg');
     let icon_boxes = document.getElementsByClassName("icon-box");
-    let maxSize = 35;
-    let widthBasedSize = Math.floor(window.innerWidth * 0.11 - 12);
-    let size = widthBasedSize > maxSize ? maxSize : widthBasedSize;
+    let widthBasedSize = Math.floor(window.innerWidth * 0.12 - 12);
+    let size = widthBasedSize > maxIconSize ? maxIconSize : widthBasedSize;
     for (let i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
         icon_boxes[i].style.padding = "6px";

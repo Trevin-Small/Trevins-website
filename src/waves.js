@@ -224,7 +224,7 @@ export const Waves = (function createWaves() {
     }
 
     function detectTouchMove(evt) {
-        preventDefault(evt);
+        evt.preventDefault();
         mouseX = evt.touches[0].pageX;
         mouseY = evt.touches[0].pageY;
     }
@@ -235,10 +235,6 @@ export const Waves = (function createWaves() {
 
     function enableScroll() {
         topLayer.removeEventListener('touchmove', detectTouchMove);
-    }
-
-    function preventDefault(e) {
-        e.preventDefault();
     }
 
     return {
