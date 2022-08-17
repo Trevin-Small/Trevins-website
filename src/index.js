@@ -11,8 +11,8 @@ window.onload = () => {
     window.onresize = function() {
         Waves.stopRender();
         Waves.resize();
-        Functions.rescaleIcons();
         Functions.rescaleFont();
+        Functions.rescaleIcons();
         Waves.newWaves();
         Waves.startRender();
     };

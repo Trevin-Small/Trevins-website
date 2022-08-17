@@ -173,17 +173,17 @@ export const Waves = (function createWaves() {
             let showText;
             if (on) {
                 switchIconFile = './images/switch-off.svg';
-                showText = 'hidden';
+                showText = 'none';
                 on = false;
                 enableMobileCurveMove();
             } else {
                 switchIconFile = './images/switch-on.svg';
-                showText = 'visible';
+                showText = 'block';
                 on = true;
                 enableScroll();
             }
             switchIcon.setAttribute('src', switchIconFile);
-            document.getElementById('welcome').style.visibility = showText;
+            document.getElementById('main-content').style.display = showText;
         }, false);
 
         document.addEventListener('keyup', function(evt) {

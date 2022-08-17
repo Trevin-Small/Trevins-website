@@ -225,8 +225,8 @@
     align-items: center;
     height: auto;
     width: auto;
-    padding: 4px 5px 4px 5px;
-    margin: 2px;
+    padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+    margin: 0.25rem;
     border-radius: 6px;
     font-size: 20px;
     fill: gray;

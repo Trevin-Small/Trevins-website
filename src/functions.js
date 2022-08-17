@@ -23,7 +23,7 @@ export const Functions = (() => {
   function rescaleIcons(){
     let icons = document.getElementsByName('icon-svg');
     let icon_boxes = document.getElementsByClassName("icon-box");
-    let widthBasedSize = Math.floor(window.innerWidth * 0.1 - 12);
+    let widthBasedSize = Math.floor(window.innerWidth * 0.12 - 12);
     let size = widthBasedSize > maxIconSize ? maxIconSize : widthBasedSize;
     for (let i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
@@ -57,8 +57,6 @@ export const Functions = (() => {
   function setColorScheme(number) {
     document.getElementById('background').style.backgroundColor = colorSchemes[number][0];
     document.getElementById('my-work-table').style.backgroundColor = colorSchemes[number][1];
-    document.getElementById('side-bar').style.backgroundColor = colorSchemes[number][2];
-    // Highlight color has to be changed manually :|
 
     let file = '';
     if (number == 0) {
@@ -108,7 +106,7 @@ export const Functions = (() => {
     rescaleFont,
     hideElement,
     showElement,
-    setColorScheme,
+    setColorScheme
   }
 
 })();
