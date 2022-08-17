@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --old-gold: #CEB888;
+    --light-gray: #C7CDD1;
+    --dark-gray: #212529;
+    --ivory-white: #FFFFF0;
+    --off-white: #FAF9F6;
+    --navbar-dark: #212529;
+    --navbar-menu: #292e33;
+}
+
 .backdrop {
     left: 0px;
     bottom: 0px;
     margin: 0px;
     overflow: hidden;
     position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 .canvas {
     pointer-events: none;
@@ -21,11 +33,9 @@
     text-align: center;
 }
 .scroll {
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    top:0;
+    bottom:0;
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -177,7 +187,7 @@
     font-size: 1vw;
 }
 
-.title-right {
+.nav-right {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
