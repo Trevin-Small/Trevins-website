@@ -2,20 +2,19 @@ import { Functions } from './functions.js';
 import { Waves } from './waves.js';
 
 
-window.onload = function() {
+window.onload = () => {
     Waves.init(document.body);
     Functions.rescaleFont();
     Functions.rescaleIcons();
-    //let colorSchemeNum = Math.floor(Math.random() * colorSchemes.length);
-    //setColorScheme(colorSchemeNum); // Uncomment for randomized color schemes
-    Functions.setColorScheme(2);
+    let colorSchemeNum = Math.floor(Math.random() * (Functions.colorSchemes.length - 1)) + 1;
+    Functions.setColorScheme(colorSchemeNum);
 
     window.onresize = function() {
         Waves.stopRender();
-        Functions.resize();
+        Waves.resize();
         Functions.rescaleIcons();
         Functions.rescaleFont();
-        shapes = generateShapes();
+        Waves.newWaves();
         Waves.startRender();
     };
 

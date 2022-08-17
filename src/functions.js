@@ -3,7 +3,7 @@ export const Functions = (() => {
   const colorSchemes = [
     // Background, Table, Side-bar, Highlight
     ['#160025','#4f0147' ,'#4f0147'], // Dark: Purples
-    ['#041C32', '#064663', '#ECB365'], // Dark: blue-green and yellow
+    ['#041C32', '#17c3b2', '#ECB365'], // Dark: blue-green and yellow
     ['#fef9e', '#17c3b2', '#227c9d'] // Light: Greens
   ]
 
@@ -52,7 +52,7 @@ export const Functions = (() => {
     if (number == 0) {
         file = 'fractal-dark.svg';
     } else if (number == 1) {
-        file = 'fractal-green.svg';
+        file = 'fractal-light.svg';
     } else if (number = 2) {
         file = 'fractal-light.svg';
     }

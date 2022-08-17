@@ -1,4 +1,4 @@
-
+![Resume](https://raw.githubusercontent.com/Trevin-Small/Trevins-website/main/dist/images/resume.png)
 <!--
 
 ### Education

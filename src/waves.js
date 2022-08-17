@@ -36,7 +36,7 @@ export const Waves = (function createWaves() {
         if (colorScheme > 10){
             colorScheme = 1;
         }
-        shapes = generateShapes();
+        generateShapes();
     }
 
     function getMousePos(evt) {
@@ -107,10 +107,10 @@ export const Waves = (function createWaves() {
     let ctx = canvas.getContext('2d');
     let width = window.innerWidth;
     let height = window.innerHeight;
-    let shapes = generateShapes();
+    let shapes = [];
 
     function generateShapes(num, spacing) {
-        let shapes = [];
+        shapes = [];
         let yCenter = window.innerHeight / 2;
         for (let i = 0; i < NUM_OF_CURVES; i += 1) {
             let points = [];
@@ -136,7 +136,7 @@ export const Waves = (function createWaves() {
             let shape = new Shape(points, colors[colorScheme][i]);
             shapes.push(shape);
         }
-        return shapes;
+
     }
 
     function init(parent) {
@@ -145,6 +145,7 @@ export const Waves = (function createWaves() {
         canvas.setAttribute("class", "canvas");
         ctx.fillStyle = '#111';
         let on = true;
+        newWaves();
 
         if (width < height) {
             NUM_MIN_MAX = Math.random() * 10 + 8;
@@ -234,6 +235,8 @@ export const Waves = (function createWaves() {
 
     return {
         init,
+        resize,
+        newWaves,
         startRender,
         stopRender
     };
