@@ -10,8 +10,7 @@ export const Functions = (() => {
   const PAGES = [
     "page-about-me",
     "page-my-work",
-    "page-resume",
-    "page-fun-stuff"
+    "page-resume"
   ]
 
   const ACTIVE_GRAY = "#4b5563";
@@ -24,11 +23,11 @@ export const Functions = (() => {
   function rescaleIcons(){
     let icons = document.getElementsByName('icon-svg');
     let icon_boxes = document.getElementsByClassName("icon-box");
-    let widthBasedSize = Math.floor(window.innerWidth * 0.12 - 12);
+    let widthBasedSize = Math.floor(window.innerWidth * 0.1 - 12);
     let size = widthBasedSize > maxIconSize ? maxIconSize : widthBasedSize;
     for (let i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
-        icon_boxes[i].style.padding = "6px";
+        icon_boxes[i].style.padding = "4px";
     }
     let switchIcon = document.getElementsByName('switch');
     switchIcon[0].style.height = (size / 1.8) + 'px';
