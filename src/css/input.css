@@ -42,9 +42,9 @@
 }
 .content-background {
     left: 50vw;
-    top: 25px;
+    top: 20px;
     position: relative;
-    width: 90vw;
+    width: 92vw;
     max-width: 800px;
     height: auto;
     transform: translate(-50%, 0);
@@ -55,7 +55,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 16px;
     color: white;
     font-family:'Courier New', Courier, monospace;
     font-size: 2.75vmin;
@@ -65,7 +65,7 @@
     box-shadow: 0px 0px 8px 4px rgb(15, 15, 15);*/
 }
 .content-container {
-    width: 95%;
+    width: 100%;
     margin: 0.5rem 0.25rem 0.5rem 0.25rem;
     flex-direction: column;
     justify-content: left;
