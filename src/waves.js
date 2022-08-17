@@ -103,6 +103,14 @@ export const Waves = (function createWaves() {
     };
 
     let canvas = document.createElement('canvas');
+    canvas.style.width = '102vw';
+    canvas.style.height = '102vh';
+    canvas.style.margin = '0';
+    canvas.style.padding = '0';
+    canvas.style.position = 'fixed';
+    canvas.style.left = '0';
+    canvas.style.top = '0';
+    canvas.style.zIndex = '-100';
     let topLayer = document.getElementById('top-layer');
     let ctx = canvas.getContext('2d');
     let width = window.innerWidth;
