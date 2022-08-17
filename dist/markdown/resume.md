@@ -1,3 +1,6 @@
+
+<!--
+
 ### Education
 ---
 - Purdue University (In Progress)  West Lafayette, IN    Bachelor of Science, Computer Science			               Est. Graduation: May 2025
@@ -49,3 +52,4 @@ Utilizing Solidity for smart contracts and Javascript for Web3 development
 - **Software:** GitHub, Git, VS code, Sublime, Fusion 360, Onshape 
 - **Programming Languages:** Python, Java, Javascript, C++, Solidity, HTML
 - **Other:** 3D printing, Soldering, Microcontrollers, Single-board computers, Basic circuit design
+--!>
