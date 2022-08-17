@@ -19,4 +19,4 @@ climbers to share their add-ons online with other members of their gym, and sugg
 - Built with Firebase and Google Cloud Storage, bundled with webpack.
 - Images are resized with [ImageKit](https://imagekit.io), which speeds up the site and saves a lot of bandwith!
 
-## 💻  Some of my Work
+## 📈  GitHub Stats

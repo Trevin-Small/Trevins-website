@@ -189,11 +189,11 @@
     position: fixed;
     height: auto;
     width: 11vw;
-    max-width: 50px;
-    top: 10vh;
-    right: 0.5vw;
-    border-radius: 14px;
-    padding: 5px 5px 5px 5px;
+    max-width: 4rem;
+    top: 12vh;
+    right: 0rem;
+    border-radius: 8px 0px 0px 8px;
+    padding: 8px 5px 5px 5px;
 }
 .switch-box {
     display: flex;
@@ -218,7 +218,7 @@
     width: auto;
     padding: 4px 5px 4px 5px;
     margin: 2px;
-    border-radius: 10px;
+    border-radius: 6px;
     font-size: 20px;
     fill: gray;
     color:white;

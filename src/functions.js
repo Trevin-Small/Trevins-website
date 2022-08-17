@@ -7,6 +7,19 @@ export const Functions = (() => {
     ['#fef9e', '#17c3b2', '#227c9d'] // Light: Greens
   ]
 
+  const PAGES = [
+    "page-about-me",
+    "page-my-work",
+    "page-resume"
+  ]
+
+  const ACTIVE_GRAY = "#4b5563";
+  const INACTIVE_GRAY = "#1f2937";
+
+  const tabs = document.getElementsByName('tab');
+
+  let currentTabNum = 0;
+
   function rescaleIcons(){
     let icons = document.getElementsByName('icon-svg');
     let icon_boxes = document.getElementsByClassName("icon-box");
@@ -59,13 +72,44 @@ export const Functions = (() => {
     document.getElementById('fractal-svg').src = './images/' + file;
   }
 
+  function switchPage(tabNumber) {
+    let currentTab = document.getElementById(PAGES[currentTabNum]);
+    let newTab = document.getElementById(PAGES[tabNumber]);
+
+    currentTab.style.display = 'none';
+    newTab.style.display = 'block';
+
+    tabs[currentTabNum].style.backgroundColor = INACTIVE_GRAY;
+    tabs[tabNumber].style.backgroundColor = ACTIVE_GRAY;
+
+    currentTabNum = tabNumber;
+  }
+
+  function tabListener() {
+    let tabCounter = 0;
+    for (let i = 0; i < tabs.length; i++) {
+      if (tabCounter != currentTabNum) {
+        tabs[i].style.backgroundColor = INACTIVE_GRAY;
+      } else {
+        tabs[i].style.backgroundColor = ACTIVE_GRAY;
+      }
+
+      tabs[i].addEventListener('click', () => {
+        switchPage(Number(tabs[i].id));
+      });
+      tabCounter++;
+    }
+  }
+
+  tabListener();
+
   return {
     colorSchemes,
     rescaleIcons,
     rescaleFont,
     hideElement,
     showElement,
-    setColorScheme
+    setColorScheme,
   }
 
 })();

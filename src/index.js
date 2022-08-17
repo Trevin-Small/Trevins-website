@@ -1,7 +1,6 @@
 import { Functions } from './functions.js';
 import { Waves } from './waves.js';
 
-
 window.onload = () => {
     Waves.init(document.body);
     Functions.rescaleFont();
@@ -17,8 +16,4 @@ window.onload = () => {
         Waves.newWaves();
         Waves.startRender();
     };
-
-    setTimeout(() => {
-        document.getElementById('md-abt-me-top').src = "./markdown/resume.md";
-    }, 3000);
 }
