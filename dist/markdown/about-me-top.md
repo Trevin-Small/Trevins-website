@@ -9,8 +9,8 @@
 - Firebase/Firestore, Google Cloud APIs
 - Git, GitHub, VS Code
 - OnShape, Fusion 360
-- Can make a mean bowl of Alfredo
-- Working at ridiculuosly late hours
+- Can make a good bowl of Alfredo
+- Working at late hours
 
 ## 🔥 My Latest Project
 **Check out [**Community Crag!**](https://communitycrag.com), the social media of climbing gyms!**

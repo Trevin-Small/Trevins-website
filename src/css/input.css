@@ -35,23 +35,24 @@
     top: 25px;
     position: relative;
     width: 73vw;
-    max-width: 850px;
+    max-width: 800px;
     height: auto;
     transform: translate(-50%, 0);
     display: flex;
-    padding: 20px 26px 20px 26px;
+    padding: 12px;
+    margin: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    opacity: 0.9;
     border-radius: 20px;
-    background-color: darkslategray;
     color: white;
     font-family:'Courier New', Courier, monospace;
     font-size: 2.75vmin;
     pointer-events: all;
-    box-shadow: 0px 0px 8px 4px rgb(15, 15, 15);
+    /*
+    background-color: darkslategray;
+    box-shadow: 0px 0px 8px 4px rgb(15, 15, 15);*/
 }
 .content-container {
     width: 95%;
@@ -72,13 +73,16 @@
 }
 .badge-container {
     max-width: 63vw;
+    display: flex;
     flex-direction: row;
-    justify-content: left;
-    padding-top: 15px;
+    justify-content: flex-start;
+    margin-top: 15px;
 }
 .badge {
     max-width: inherit;
     background-color: transparent;
+    margin-right: 0.75rem;
+    border-radius: 6px;
 }
 .top-level{
     top: 10%;
