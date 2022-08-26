@@ -30,8 +30,7 @@ export const Functions = (() => {
         icon_boxes[i].style.padding = "4px";
     }
     let switchIcon = document.getElementsByName('switch');
-    switchIcon[0].style.height = (size / 1.8) + 'px';
-    switchIcon[0].style.padding = "0px";
+    switchIcon[0].style.height = (size / 1.85) + 'px';
   }
 
   function rescaleFont() {
