@@ -23,14 +23,15 @@ export const Functions = (() => {
   function rescaleIcons(){
     let icons = document.getElementsByName('icon-svg');
     let icon_boxes = document.getElementsByClassName("icon-box");
-    let widthBasedSize = Math.floor(window.innerWidth * 0.12 - 12);
+    const titleContainer = document.getElementById('title-container');
+    let widthBasedSize = Math.floor((titleContainer.offsetWidth / (icons.length + 2)) - 12);
     let size = widthBasedSize > maxIconSize ? maxIconSize : widthBasedSize;
     for (let i = 0; i < icons.length; i++){
         icons[i].style.fontSize = size + 'px';
         icon_boxes[i].style.padding = "4px";
     }
-    let switchIcon = document.getElementsByName('switch');
-    switchIcon[0].style.height = (size / 1.85) + 'px';
+    let switchIcon = document.getElementsByName('switch')[0];
+    switchIcon.style.width = document.getElementById('github-icon').offsetWidth + 'px';
   }
 
   function rescaleFont() {

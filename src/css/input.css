@@ -72,6 +72,7 @@
     justify-content: left;
     align-items: left;
     text-align: left;
+    pointer-events: all;
 }
 .spacer{
     height: 20vh;
@@ -213,7 +214,6 @@
     width: auto;
     margin: 2px;
     border-radius: 10px;
-    font-size: 20px;
     fill: gray;
     color:white;
     opacity: 0.9;
