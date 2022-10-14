@@ -43,6 +43,7 @@ export const Functions = (() => {
         } else {
             messageBoxes[i].style.fontSize = smallerDimension * 0.0275;
         }
+
     }
   }
 

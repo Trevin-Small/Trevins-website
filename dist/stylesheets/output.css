@@ -693,6 +693,14 @@ video {
   text-align: center;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
 :root {
   --old-gold: #CEB888;
   --light-gray: #C7CDD1;
