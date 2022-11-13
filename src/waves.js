@@ -1,3 +1,5 @@
+import _ from "lodash";
+
 export const Waves = (function createWaves() {
     'use strict';
     let raf_ID = 0;
@@ -13,17 +15,26 @@ export const Waves = (function createWaves() {
     let mouseX = 0;
     let mouseY = 0;
     let siteTheme = 1;
-    let siteColorThemes = {
-        1: ["#4f0147", "#290025", "#11001c", "#ffffff"],
-        2: ["#ece071", "#454545", "#dbdbdb", "#000000"]
-    };
+    let siteColorThemes = [
+        ["#4f0147", "#290025", "#11001c", "#ffffff"],
+        ["#ece071", "#454545", "#dbdbdb", "#000000"]
+    ];
 
-    function nextColorTheme(){
+    function invertColorTheme(){
         siteTheme += 1;
-        if (siteTheme > 2){
-            siteTheme = 1;
+        if (siteTheme > 1){
+            siteTheme = 0;
         }
         document.getElementById('background').style.backgroundColor = siteColorThemes[siteTheme][2];
+
+        if (siteTheme == 0) {
+            document.getElementById('moon-icon').style.display = 'none';
+            document.getElementById('sun-icon').style.display = 'block';
+        } else {
+            document.getElementById('moon-icon').style.display = 'block';
+            document.getElementById('sun-icon').style.display = 'none';
+        }
+
     }
 
     function newWaves(){
@@ -148,6 +159,7 @@ export const Waves = (function createWaves() {
     }
 
     function init(parent) {
+        invertColorTheme();
         resize();
         parent.appendChild(canvas);
         canvas.setAttribute("class", "canvas");
@@ -165,6 +177,11 @@ export const Waves = (function createWaves() {
 
         topLayer.addEventListener('mousemove', function(evt) {
             getMousePos(evt);
+        }, false);
+
+        document.getElementById('color-theme-icon').addEventListener('click', function(evt) {
+            console.log("Clicked");
+            invertColorTheme();
         }, false);
 
         document.getElementById('switch-div').addEventListener('click', function(evt){
@@ -192,7 +209,7 @@ export const Waves = (function createWaves() {
                 case 'ArrowRight':
                 case 'ArrowDown':
                 case 'ArrowUp':
-                    nextColorTheme();
+                    invertColorTheme();
                     break;
                 default:
                     break;
