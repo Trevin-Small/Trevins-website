@@ -6,7 +6,7 @@
 ### I'm especially interested in:
   - Web development, especially in regard to making web apps more interactive and interesting (why are so many websites cookie cutter layouts? I love visually interesting pages...)
   - Algorithms and Mathematics. Working through problems is *really* satisfying, and I love finding clever solutions to tough problems.
-  - Systems/embedded programming. I think lower-level software is incredibly fascinating, and I love OS's, memory management, hardware interaction and computer architecture.
+  - Systems and embedded programming. I think lower-level software is incredibly fascinating, and I love OS's, memory management, hardware interaction and computer architecture.
 
 ## 🛠️ Skills
 - JS, HTML/CSS, Node.js, Java, C, Python, Solidity
