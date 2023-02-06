@@ -12,7 +12,7 @@
 - C, Java, JavaScript, Node.js, Python, HTML/CSS
 - Firebase/Firestore, Google Cloud APIs, Webpack, Tailwind CSS
 - Git, GitHub, VS Code
-- Unix/ZSH Shell, Bash scripting
+- Unix/ZSH Shell
 - GCC & GDB
 - CAD & 3D Printing
 - Working at late hours
