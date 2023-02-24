@@ -1,0 +1,3 @@
+- A website that allows climbers to share their route online with other users
+- Features "democratic" bouldering grades, allowing users to vote for the increase or decrease of the grade of a problem
+- Built with HTML, CSS, JavaScript, Firebase, Google Cloud, ImageKit.io, and WebPack

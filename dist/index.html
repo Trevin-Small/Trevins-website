@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <script src="./email.js"></script>
+    <script src="./csi.js"></script>
 </head>
 
 <body class="backdrop flex flex-col justify-start" id="background">
@@ -159,6 +160,40 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="w-full h-auto flex flex-col justify-start bg-slate-500 p-3 my-2 rounded-lg">
+
+                            <div class="flex flex-row justify-start pl-2">
+
+                              <zero-md src="./portfolio/0/title.md" id="portfolio-item-title">
+                                <template>
+                                    <link rel="stylesheet" href="./stylesheets/markdown.css">
+                                    <link rel="stylesheet" href="./stylesheets/prism.css">
+                                </template>
+                              </zero-md>
+
+                            </div>
+
+                            <hr class="m-2">
+
+                            <div class="flex flex-row justify-start text-left">
+
+                              <img class="w-1/5 h-auto pl-4" src="./portfolio/0/ccrag.png" id="portfolio-item-image">
+
+                              <div class="w-full h-auto" id="portfolio-item-description">
+
+                                <zero-md src="./portfolio/0/description.md">
+                                  <template>
+                                      <link rel="stylesheet" href="./stylesheets/markdown.css">
+                                      <link rel="stylesheet" href="./stylesheets/prism.css">
+                                  </template>
+                                </zero-md>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
                     </div>
 
                     <div class="w-full h-full m-0 p-0" style="display:none" id="page-resume">
