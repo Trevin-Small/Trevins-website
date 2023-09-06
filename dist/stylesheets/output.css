@@ -693,14 +693,6 @@ video {
   text-align: center;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
 :root {
   --old-gold: #CEB888;
   --light-gray: #C7CDD1;
@@ -829,9 +821,10 @@ video {
 }
 
 .my-work {
-  width: 90%;
+  width: auto;
   height: auto;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   border: 5px solid black;
   border-radius: 14px;
   gap: 3px;
@@ -854,6 +847,7 @@ video {
 }
 
 .cell-container{
+  width: 7rem;
   height: auto;
   background-color: transparent;
   display: flex;

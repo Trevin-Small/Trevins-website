@@ -120,9 +120,10 @@
 }
 
 .my-work {
-    width: 90%;
+    width: auto;
     height: auto;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     border: 5px solid black;
     border-radius: 14px;
     gap: 3px;
@@ -148,6 +149,7 @@
 }
 
 .cell-container{
+    width: 7rem;
     height: auto;
     background-color: transparent;
     display: flex;
