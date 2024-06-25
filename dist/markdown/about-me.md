@@ -14,15 +14,4 @@
 - Git, GitHub, VS Code
 - CAD & 3D Printing
 
-## 😄 Other Interests / Hobbies
-- Rock Climbing
-- Hiking
-- Camping
-- Cooking
-- Skateboarding
-- Kayaking
-- Microcontrollers, Single-board computers and circuits
-- Robotics
-- 3D Printing
-
 ## 📈  GitHub Stats
